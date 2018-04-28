@@ -21,11 +21,12 @@ const getEntry2: GetEntryOfType = (entryId: string) => {
 };
 
 
-const getAssetById2: (assetId: string) => Promise<Asset> = assetId => {
+const getAssetById2: (assetId: string) => Promise<Asset> = (assetId) => {
   const client = clientFactory();
   return client.getAsset(assetId);
 };
 
+// noinspection JSUnusedGlobalSymbols
 export const getAssetById = getAssetById2;
 export const getEntry = getEntry2;
 export const getEntriesOfType = getEntriesOfType2;

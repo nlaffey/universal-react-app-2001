@@ -8,16 +8,17 @@ export interface MenuCategoryItemsEntity {
   fields: Fields;
 }
 export interface Sys {
-  space: SpaceOrContentType;
+  space: SpaceOrEnvironmentOrContentType;
   id: string;
   type: string;
   createdAt: string;
   updatedAt: string;
+  environment: SpaceOrEnvironmentOrContentType;
   revision: number;
-  contentType: SpaceOrContentType;
+  contentType: SpaceOrEnvironmentOrContentType;
   locale: string;
 }
-export interface SpaceOrContentType {
+export interface SpaceOrEnvironmentOrContentType {
   sys: Sys1;
 }
 export interface Sys1 {

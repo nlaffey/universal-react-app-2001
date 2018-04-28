@@ -1,7 +1,7 @@
 import * as npmRun from 'npm-run';
 import * as fs from 'fs';
-import { typeIds } from '../contentful/typeIds';
-import { getEntriesOfType } from '../contentful/service';
+import { typeIds } from '../src/contentful/typeIds';
+import { getEntriesOfType } from '../src/contentful/service';
 
 export const updateAllTypings = () => {
   Object.keys(typeIds).forEach((key: string) => {
@@ -14,7 +14,8 @@ export const updateAllTypings = () => {
 const updateTypingsByEntryId = (interfaceName: string, id: string) => {
   getEntriesOfType(id).then((data) => {
     console.log(`Creating type, interfaceName: ${interfaceName}, id: ${id}`);
-    const path = `/contentful/${interfaceName}`;
+    const path = `${process.cwd()}/src/typings/contentful/${interfaceName}`;
+    console.log(`path:${path}`);
     fs.writeFileSync(__dirname + path + '-full.json', JSON.stringify(data));
     fs.writeFileSync(__dirname + path + '.json', JSON.stringify(data.items[0].fields));
     const command = `make_types -i .${path}.d.ts .${path}.json ${interfaceName}`;
@@ -25,3 +26,6 @@ const updateTypingsByEntryId = (interfaceName: string, id: string) => {
     `);
   });
 };
+
+
+updateAllTypings();

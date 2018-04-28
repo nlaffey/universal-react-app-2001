@@ -1,43 +1,58 @@
 import * as express from 'express';
 import * as React from 'react';
-import { renderToString } from 'react-dom/server'
+import * as path from 'path';
+import * as compression from 'compression';
+import { renderToString } from 'react-dom/server';
 import { Brand } from './typings/contentful/Brand';
 import { MenuCategory } from './typings/contentful/MenuCategory';
 import { getEntriesOfType, getEntry } from './contentful/service';
 import { typeIds } from './contentful/typeIds';
-import * as path from 'path';
-import { AppContainer } from "./components/AppContainer";
-//webpack hot reloading middleware
-
+import { AppContainer } from './components/AppContainer';
+import { StaticRouter } from 'react-router';
+import { renderRootTemplate } from './templates';
 
 declare var global: {
-  appRootPath: string
+  appRootPath: string,
 };
 
-let assetDomain = '/';
-let bundlePath = "/public/bundle.js";
+const assetDomain = '/';
+const bundlePath = '/public/bundle.js';
 const fullBundleUrl = path.join(assetDomain, bundlePath);
 
-export const setupApp = (serverCompiler) => {
+export const setupApp = () => {
 
   const app = express();
 
-  app.get('/', async (req, res) => {
+  app.use(compression());
+
+  const routes = {
+    '/menu': {},
+    '/': {},
+  };
+
+  app.get('*', async (req, res, next) => {
+    const route = routes[req.url];
+    if (route) {
+      const props = await AppContainer.getServerProps();
+      const contentHtml = renderToString(
+        <StaticRouter location={req.url} context={{}}>
+          <AppContainer {...props}/>
+        </StaticRouter>,
+      );
+      res.send(renderRootTemplate(contentHtml, fullBundleUrl, props));
+    } else {
+      next();
+    }
+  });
+
+  app.get('/menu', async (req, res) => {
     const props = await AppContainer.getServerProps();
-    const html = renderToString(<AppContainer {...props}/>);
-    res.send(`
-    <!doctype html>
-    <html>
-      <head>
-        <title>Redux Universal Example</title>
-      </head>
-      <body>
-      <h1>Another</h1>
-        <div id="root">${html}</div>
-        <script type="text/javascript">window.initialProps = ${JSON.stringify(props)}</script>
-        <script src="${fullBundleUrl}"></script>
-      </body>
-    </html>`);
+    const contentHtml = renderToString(
+      <StaticRouter location={req.url} context={{}}>
+        <AppContainer {...props}/>
+      </StaticRouter>,
+    );
+    res.send(renderRootTemplate(contentHtml, fullBundleUrl, props));
   });
 
   app.get('/data', async (req, res) => {

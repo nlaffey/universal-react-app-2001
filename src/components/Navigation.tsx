@@ -1,5 +1,5 @@
-import * as React from 'react'
-
+import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 
 interface NavigationProps {
@@ -7,13 +7,12 @@ interface NavigationProps {
 
 export default class extends React.Component<NavigationProps> {
 
-    render() {
-        return (
-            <ul>
-                <li><a href="/"><span>Menu</span></a></li>
-                <li><a href="/merch"><span>Merch</span></a></li>
-                <li>Catering</li>
-            </ul>
-        )
-    }
+  render() {
+    return (
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/menu">Menu</Link></li>
+      </ul>
+    );
+  }
 }

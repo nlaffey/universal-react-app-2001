@@ -1,19 +1,14 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
-// noinspection WebpackConfigHighlighting
 module.exports = {
-  watch: true,
   context: path.resolve(__dirname),
-  entry: "./src/server.tsx",
+  entry: { updateTypings: "../utils/updateTypings.ts" },
   output: {
-    library: 'appServer',
     path: path.resolve(__dirname, "dist"),
-    filename: "server.js",
-    libraryTarget: 'umd'
+    filename: "[name].js"
   },
   module: {
-    // configuration regarding modules
     rules: [
       {
         test: /\.tsx?$/,
@@ -27,7 +22,7 @@ module.exports = {
     ],
     extensions: [".ts", ".json", ".tsx", ".js", ".jsx"]
   },
-  // target: "node",
+  target: "node",
   devtool: "source-map",
   externals: [nodeExternals()]
 };

@@ -1,4 +1,5 @@
-export interface MerchandiseItem {
+// noinspection JSUnusedGlobalSymbols
+export interface  MerchandiseItem {
   productName: string;
   slug: string;
   productDescription: string;
@@ -10,15 +11,16 @@ export interface ImageEntity {
   fields: Fields;
 }
 export interface Sys {
-  space: Space;
+  space: SpaceOrEnvironment;
   id: string;
   type: string;
   createdAt: string;
   updatedAt: string;
+  environment: SpaceOrEnvironment;
   revision: number;
   locale: string;
 }
-export interface Space {
+export interface SpaceOrEnvironment {
   sys: Sys1;
 }
 export interface Sys1 {

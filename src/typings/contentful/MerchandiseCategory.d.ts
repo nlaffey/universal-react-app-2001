@@ -1,3 +1,4 @@
+// noinspection JSUnusedGlobalSymbols
 export interface MerchandiseCategory {
   title: string;
   description: string;
@@ -8,16 +9,17 @@ export interface MenuCategoryItemsEntity {
   fields: Fields;
 }
 export interface Sys {
-  space: SpaceOrContentType;
+  space: SpaceOrEnvironmentOrContentType;
   id: string;
   type: string;
   createdAt: string;
   updatedAt: string;
+  environment: SpaceOrEnvironmentOrContentType;
   revision: number;
-  contentType: SpaceOrContentType;
+  contentType: SpaceOrEnvironmentOrContentType;
   locale: string;
 }
-export interface SpaceOrContentType {
+export interface SpaceOrEnvironmentOrContentType {
   sys: Sys1;
 }
 export interface Sys1 {
@@ -37,11 +39,12 @@ export interface ImageEntity {
   fields: Fields1;
 }
 export interface Sys2 {
-  space: SpaceOrContentType;
+  space: SpaceOrEnvironmentOrContentType;
   id: string;
   type: string;
   createdAt: string;
   updatedAt: string;
+  environment: SpaceOrEnvironmentOrContentType;
   revision: number;
   locale: string;
 }
