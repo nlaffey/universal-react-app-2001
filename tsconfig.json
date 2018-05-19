@@ -2,13 +2,17 @@
   "compilerOptions": {
     "outDir": "./dist",
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "sourceMap": true,
     "noImplicitAny": false,
     "module": "es6",
     "target": "es5",
     "jsx": "react",
-    "lib": ["ES2015", "DOM"]
+    "lib": [
+      "ES2015",
+      "DOM"
+    ]
   },
   "include": [
     "./src/**/*"

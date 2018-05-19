@@ -16,6 +16,23 @@ module.exports = {
       {
         test: /\.tsx?$/,
         loader: "awesome-typescript-loader?configFileName=tsconfig.server.json"
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          "isomorphic-style-loader",
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              camelCase: true,
+              localIdentName: "[hash:base64]"
+            }
+          },
+          'postcss-loader'
+        ]
       }
     ]
   },

@@ -7,9 +7,13 @@ import { Brand } from './typings/contentful/Brand';
 import { MenuCategory } from './typings/contentful/MenuCategory';
 import { getEntriesOfType, getEntry } from './contentful/service';
 import { typeIds } from './contentful/typeIds';
-import { AppContainer } from './components/AppContainer';
-import { StaticRouter } from 'react-router';
 import { renderRootTemplate } from './templates';
+import { router, getRouteCss, insertCss } from './router';
+import { getInitialProps } from './getInitialProps';
+import { EntryCollection, Entry } from 'contentful';
+import { AppContainerInitialProps } from './components/AppContainer';
+import { APP_CONTAINER_PROPS_PATH } from './constants/pathNames';
+
 
 declare var global: {
   appRootPath: string,
@@ -19,50 +23,49 @@ const assetDomain = '/';
 const bundlePath = '/public/bundle.js';
 const fullBundleUrl = path.join(assetDomain, bundlePath);
 
+
+// noinspection TypescriptExplicitMemberType
 export const setupApp = () => {
 
   const app = express();
 
   app.use(compression());
 
-  const routes = {
-    '/menu': {},
-    '/': {},
-  };
-
   app.get('*', async (req, res, next) => {
-    const route = routes[req.url];
-    if (route) {
-      const props = await AppContainer.getServerProps();
-      const contentHtml = renderToString(
-        <StaticRouter location={req.url} context={{}}>
-          <AppContainer {...props}/>
-        </StaticRouter>,
-      );
-      res.send(renderRootTemplate(contentHtml, fullBundleUrl, props));
-    } else {
+    const pathname = req.url;
+    const context = { insertCss };
+    const resolveObject = { pathname, context };
+    router.resolve(resolveObject).then(async (component) => {
+      try {
+        const initialProps = await getInitialProps(component);
+        const resolveObjectWithprops = { ...resolveObject, initialProps };
+        router.resolve(resolveObjectWithprops).then((componentWithProps) => {
+          const componentHtml = renderToString(componentWithProps);
+          const css = getRouteCss();
+          const html = renderRootTemplate(componentHtml, fullBundleUrl, initialProps, css);
+          res.send(html);
+        });
+      } catch (err) {
+        res.send(err.stack);
+      }
+    }).catch(() => {
       next();
-    }
+    });
   });
 
-  app.get('/menu', async (req, res) => {
-    const props = await AppContainer.getServerProps();
-    const contentHtml = renderToString(
-      <StaticRouter location={req.url} context={{}}>
-        <AppContainer {...props}/>
-      </StaticRouter>,
-    );
-    res.send(renderRootTemplate(contentHtml, fullBundleUrl, props));
-  });
-
-  app.get('/data', async (req, res) => {
+  app.get(APP_CONTAINER_PROPS_PATH, async (req, res) => {
     const menuCategories = await getEntriesOfType<MenuCategory>(typeIds.MenuCategory);
     const brand = await getEntry<Brand>('3I483EqYbKMaQqwS6wWY0e');
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ menuCategories, brand }));
+    const dataResponseObject: AppContainerInitialProps = {
+      menuCategories,
+      brand
+    };
+    res.send(JSON.stringify(dataResponseObject));
   });
 
   const publicPath = path.resolve(global.appRootPath, './public');
   app.use('/public', express.static(publicPath));
+
   return app;
 };

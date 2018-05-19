@@ -2,42 +2,48 @@ import * as React from 'react';
 import * as fetch from 'isomorphic-fetch';
 import { Brand } from '../typings/contentful/Brand';
 import Navigation from './Navigation';
-import { MenuCategory } from '../typings/contentful/MenuCategory';
-import Menu from './Menu';
-import { EntryCollection, Entry } from 'contentful';
-import { Switch, Route } from 'react-router';
-import Home from './Home';
+import { Entry, EntryCollection } from 'contentful';
 import Footer from './Footer';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import { InitPropsContext } from '../router';
+import { MenuCategory } from '../typings/contentful/MenuCategory';
+import { APP_CONTAINER_PROPS_PATH } from '../constants/pathNames';
 
-interface AppContainerProps {
+const styles = require('./AppContainer.css');
+
+export interface AppContainerInitialProps {
   menuCategories: EntryCollection<MenuCategory>;
   brand: Entry<Brand>;
 }
 
-export class AppContainer extends React.Component<AppContainerProps, any> {
+export interface AppContainerState {
+  assetsUrl: string;
+  brand: Entry<Brand>;
+}
 
-  static async getServerProps() {
-    const data = await fetch('http://localhost:3000/data');
+class AppContainer extends React.Component<AppContainerInitialProps, AppContainerState> {
+
+  static async getInitialProps(): Promise<AppContainerInitialProps> {
+    const data = await fetch(`http://localhost:3000${APP_CONTAINER_PROPS_PATH}`);
     return await data.json();
   }
 
   render() {
-    const { menuCategories, brand } = this.props;
-    const menuProps = { menuCategories };
-    const homeProps = { brand };
     return (
-      <div>
-        <Navigation/>
-        <Switch>
-          <Route path="/" exact={true}>
-            <Home {...homeProps}/>
-          </Route>
-          <Route path="/menu" exact={true}>
-            <Menu {...menuProps}/>
-          </Route>
-        </Switch>
-        <Footer brand={brand}/>
-      </div>
+      <InitPropsContext.Consumer>
+        {initProps => (
+          <div className={styles.container}>
+            <Navigation/>
+            <h1>App container for {initProps.AppContainer.brand.fields.companyName}</h1>
+            {this.props.children}
+            <Footer/>
+          </div>)
+        }
+      </InitPropsContext.Consumer>
     );
   }
 }
+
+const AppContainerWithStyles = withStyles(styles)(AppContainer);
+
+export default AppContainerWithStyles;

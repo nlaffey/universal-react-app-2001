@@ -7,6 +7,7 @@ interface MenuProps {
   menuCategories: EntryCollection<MenuCategory>;
 }
 
+// noinspection JSUnusedGlobalSymbols
 export default class extends React.Component<MenuProps> {
 
   renderItems(menuCategoryItems: (MenuCategoryItemsEntity)[] | any) {
@@ -39,6 +40,7 @@ export default class extends React.Component<MenuProps> {
   render() {
     return (
       <div>
+        <h1>The Menu</h1>
         {this.renderCategories()}
       </div>
     );

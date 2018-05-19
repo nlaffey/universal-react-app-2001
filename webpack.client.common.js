@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   context: path.resolve(__dirname),
-  entry: "./src/index",
+  entry: "./src/clientEntry.tsx",
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "bundle.js",
@@ -16,6 +16,22 @@ module.exports = {
         options: {
           presets: ["es2015"]
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'isomorphic-style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              camelCase: true,
+              localIdentName: "[hash:base64]"
+            }
+          },
+          'postcss-loader'
+        ]
       }
     ]
   },
