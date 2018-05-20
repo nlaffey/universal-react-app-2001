@@ -6,13 +6,11 @@ import { Entry, EntryCollection } from 'contentful';
 import Footer from './Footer';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import { InitPropsContext } from '../router';
-import { MenuCategory } from '../typings/contentful/MenuCategory';
 import { APP_CONTAINER_PROPS_PATH } from '../constants/pathNames';
 
 const styles = require('./AppContainer.css');
 
 export interface AppContainerInitialProps {
-  menuCategories: EntryCollection<MenuCategory>;
   brand: Entry<Brand>;
 }
 
@@ -21,11 +19,17 @@ export interface AppContainerState {
   brand: Entry<Brand>;
 }
 
+type AppContainerInitialPropsResponseObject = { id: string, json: AppContainerInitialProps };
+
 class AppContainer extends React.Component<AppContainerInitialProps, AppContainerState> {
 
-  static async getInitialProps(): Promise<AppContainerInitialProps> {
-    const data = await fetch(`http://localhost:3000${APP_CONTAINER_PROPS_PATH}`);
-    return await data.json();
+  static async getInitialProps(): Promise<AppContainerInitialPropsResponseObject> {
+    const data = await fetch(`http://localhost:3000${APP_CONTAINER_PROPS_PATH}`, { cache: 'force-cache' });
+    const json = await data.json();
+    return {
+      json,
+      id: 'AppContainer'
+    };
   }
 
   render() {
@@ -43,6 +47,7 @@ class AppContainer extends React.Component<AppContainerInitialProps, AppContaine
     );
   }
 }
+
 
 const AppContainerWithStyles = withStyles(styles)(AppContainer);
 

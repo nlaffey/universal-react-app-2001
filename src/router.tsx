@@ -1,7 +1,8 @@
 import * as universalRouter from 'universal-router';
 import * as React from 'react';
 import AppContainer, { AppContainerInitialProps } from './components/AppContainer';
-import ContextProvider from './components/ContextProvider';
+import StyleContextProvider from './components/StyleContextProvider';
+import Menu, { MenuInitialProps } from './components/Menu';
 
 export const cssSet = new Set();
 export const insertCss = (...styles) => {
@@ -31,20 +32,26 @@ const context: AppContext = {
 
 interface InitPropsDefaultValue {
   AppContainer: AppContainerInitialProps;
+  Menu: MenuInitialProps;
 }
 
-export const InitPropsContext = React.createContext<InitPropsDefaultValue>({ AppContainer: null });
+export const InitPropsContext = React.createContext<InitPropsDefaultValue>(
+  {
+    AppContainer: null,
+    Menu: null
+  }
+);
 
 export const routes = [
   {
     path: '/',
     action: routerContext => (
       <InitPropsContext.Provider value={routerContext.initialProps}>
-        <ContextProvider context={context}>
+        <StyleContextProvider context={context}>
           <AppContainer>
             <h2>Home</h2>
           </AppContainer>
-        </ContextProvider>
+        </StyleContextProvider>
       </InitPropsContext.Provider>
     ),
   },
@@ -52,11 +59,11 @@ export const routes = [
     path: '/menu',
     action: routerContext => (
       <InitPropsContext.Provider value={routerContext.initialProps}>
-        <ContextProvider context={context}>
+        <StyleContextProvider context={context}>
           <AppContainer>
-            <h2>Menu</h2>
+            <Menu tester={true}/>
           </AppContainer>
-        </ContextProvider>
+        </StyleContextProvider>
       </InitPropsContext.Provider>),
   },
 ];

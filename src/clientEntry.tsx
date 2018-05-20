@@ -24,23 +24,29 @@ interface Location {
   key: string;
   pathname: string;
   search: string;
-  state: { isInitialRoute: boolean };
+  state: { isInitialRender: boolean };
 }
 
 const renderRoute = (location: Location) => {
   const resolveObject = getResolveObject(location);
   router.resolve(resolveObject).then(async (component) => {
-    // We don't need to get initialProps if this is the initialRender, we already retrieved these
-    // on the server.
+    // We don't need to get initialProps if this is the initialRender,
+    // we already retrieved these on the server.
     let initialProps;
-    if (!location.state || !location.state.isInitialRoute) {
-      initialProps = await getInitialProps(component);
-    } else {
+    const isInitialRender = location.state && location.state.isInitialRender;
+    if (isInitialRender) {
       initialProps = window.initialProps;
+    } else {
+      initialProps = await getInitialProps(component);
     }
     const resolveObjectWithProps = { ...resolveObject, initialProps };
     router.resolve(resolveObjectWithProps).then((componentWithProps) => {
-      ReactDOM.render(componentWithProps, mountingPoint);
+      if (isInitialRender) {
+        ReactDOM.hydrate(componentWithProps, mountingPoint);
+      } else {
+        ReactDOM.render(componentWithProps, mountingPoint);
+      }
+
     });
   });
 };
@@ -50,7 +56,7 @@ const initialRoute: Location = {
   key: null,
   pathname: window.location.pathname,
   search: null,
-  state: { isInitialRoute: true }
+  state: { isInitialRender: true }
 };
 
 renderRoute(initialRoute);
