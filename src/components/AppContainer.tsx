@@ -36,7 +36,8 @@ class AppContainer extends React.Component<AppContainerInitialProps, AppContaine
 }
 
 const getInitialProps = async () => {
-  const data = await fetch(`http://localhost:3000${APP_CONTAINER_PROPS_PATH}`, { cache: 'force-cache' });
+  const { apiPath } : any = window;
+  const data = await fetch(`${apiPath}${APP_CONTAINER_PROPS_PATH}`, { cache: 'force-cache' });
   return data.json();
 };
 
