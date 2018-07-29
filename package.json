@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node $NODE_DEBUG_OPTION ./utils/startDevelopment.js",
-    "prod": "NODE_ENV=production node $NODE_DEBUG_OPTION ./utils/startProduction.js ",
+    "start": "NODE_ENV=production node $NODE_DEBUG_OPTION ./utils/startProduction.js ",
     "updateTypings": "node ./dist/updateTypings",
     "buildUtils": "webpack --config webpack.utils.js",
     "test": "echo \"Error: no test specified\" && exit 1",
