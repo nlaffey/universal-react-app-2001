@@ -22,17 +22,13 @@ export interface AppContainerState {
 class AppContainer extends React.Component<AppContainerInitialProps, AppContainerState> {
 
   render() {
-    const {
-      brand: { fields: { companyName } },
-      children
-    } = this.props;
 
     return (
       <div className={styles.container}>
         <Navigation/>
-        <h1>App container for {companyName}</h1>
+        {/*<h1>App container for {companyName}</h1>*/}
         <div>
-          {children}
+          {this.props.children}
           <Footer/>
         </div>
       </div>);
