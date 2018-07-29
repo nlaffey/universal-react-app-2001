@@ -43,13 +43,13 @@ class Menu extends React.Component<MenuProps> {
         <h1>Menu</h1>
         {this.renderCategories()}
       </div>
-
     );
   }
 }
 
 const getInitialProps = async () => {
-  const data = await fetch(`http://localhost:3000${MENU_PROPS_PATH}`, { cache: 'force-cache' });
+  const { apiPath } : any = window;
+  const data = await fetch(`${apiPath}${MENU_PROPS_PATH}`, { cache: 'force-cache' });
   return data.json();
 };
 
