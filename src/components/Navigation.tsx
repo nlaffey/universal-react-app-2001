@@ -6,11 +6,6 @@ interface NavigationProps {
 
 class Navigation extends React.Component<NavigationProps> {
 
-  static async getInitialProps(): Promise<NavigationProps> {
-    const data = await fetch('http://www.example.com');
-    return await data.json();
-  }
-
   render() {
     return (
       <div>

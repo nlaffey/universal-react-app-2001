@@ -16,6 +16,7 @@ function createServer() {
 function startServer() {
   if (server) {
     server.close(() => {
+      console.log('!!!Closing server!!!');
       createServer();
     });
   } else {

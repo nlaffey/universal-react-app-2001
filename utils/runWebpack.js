@@ -5,7 +5,6 @@ const clientLog = weblog({ name: 'client' });
 
 global.appRootPath = path.resolve(__dirname, '../');
 
-
 const logging = (config, err, stats, callback) => {
 
   if (err) {
@@ -31,7 +30,9 @@ const logging = (config, err, stats, callback) => {
     assets: false
   }));
 
-  if (callback) callback();
+  if (!stats.hasErrors() && callback) {
+    callback();
+  }
 };
 
 const webpackWatchWithLogging = (config, callback) => {

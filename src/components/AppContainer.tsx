@@ -2,11 +2,11 @@ import * as React from 'react';
 import * as fetch from 'isomorphic-fetch';
 import { Brand } from '../typings/contentful/Brand';
 import Navigation from './Navigation';
-import { Entry, EntryCollection } from 'contentful';
+import { Entry } from 'contentful';
 import Footer from './Footer';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import { InitPropsContext } from '../router';
 import { APP_CONTAINER_PROPS_PATH } from '../constants/pathNames';
+import { withInitialProps } from './WithInitialProps';
 
 const styles = require('./AppContainer.css');
 
@@ -19,36 +19,32 @@ export interface AppContainerState {
   brand: Entry<Brand>;
 }
 
-type AppContainerInitialPropsResponseObject = { id: string, json: AppContainerInitialProps };
-
 class AppContainer extends React.Component<AppContainerInitialProps, AppContainerState> {
 
-  static async getInitialProps(): Promise<AppContainerInitialPropsResponseObject> {
-    const data = await fetch(`http://localhost:3000${APP_CONTAINER_PROPS_PATH}`, { cache: 'force-cache' });
-    const json = await data.json();
-    return {
-      json,
-      id: 'AppContainer'
-    };
-  }
-
   render() {
+    const {
+      brand: { fields: { companyName } },
+      children
+    } = this.props;
+
     return (
-      <InitPropsContext.Consumer>
-        {initProps => (
-          <div className={styles.container}>
-            <Navigation/>
-            <h1>App container for {initProps.AppContainer.brand.fields.companyName}</h1>
-            {this.props.children}
-            <Footer/>
-          </div>)
-        }
-      </InitPropsContext.Consumer>
-    );
+      <div className={styles.container}>
+        <Navigation/>
+        <h1>App container for {companyName}</h1>
+        <div>
+          {children}
+          <Footer/>
+        </div>
+      </div>);
   }
 }
 
+const getInitialProps = async () => {
+  const data = await fetch(`http://localhost:3000${APP_CONTAINER_PROPS_PATH}`, { cache: 'force-cache' });
+  return data.json();
+};
 
-const AppContainerWithStyles = withStyles(styles)(AppContainer);
+const AppContainerWithInitialProps = withInitialProps(AppContainer, getInitialProps);
+const AppContainerWithStylesAndInitialProps = withStyles(styles)(AppContainerWithInitialProps);
 
-export default AppContainerWithStyles;
+export default AppContainerWithStylesAndInitialProps;

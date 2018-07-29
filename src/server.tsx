@@ -12,7 +12,7 @@ import { router, getRouteCss, insertCss } from './router';
 import { getInitialProps } from './getInitialProps';
 import { AppContainerInitialProps } from './components/AppContainer';
 import { APP_CONTAINER_PROPS_PATH, MENU_PROPS_PATH } from './constants/pathNames';
-import { MenuInitialProps } from './components/Menu';
+import { MenuProps } from './components/Menu';
 
 declare var global: {
   appRootPath: string,
@@ -65,7 +65,7 @@ export const setupApp = () => {
     const menuCategories = await getEntriesOfType<MenuCategory>(typeIds.MenuCategory);
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Cache-Control', 'public, max-age=31536000');
-    const dataResponseObject: MenuInitialProps = {
+    const dataResponseObject: MenuProps = {
       menuCategories,
     };
     res.send(JSON.stringify(dataResponseObject));

@@ -2,35 +2,15 @@ import * as React from 'react';
 import { EntryCollection } from 'contentful';
 import { MenuCategory, MenuCategoryItemsEntity } from '../typings/contentful/MenuCategory';
 import { MENU_PROPS_PATH } from '../constants/pathNames';
-import { InitPropsContext } from '../router';
+import { withInitialProps } from './WithInitialProps';
 
-
-export interface MenuInitialPropsWrapper {
-  id: string;
-  json: MenuInitialProps;
-}
-
-export interface MenuInitialProps {
+export interface MenuProps {
   menuCategories: EntryCollection<MenuCategory>;
 }
 
-export interface MenuProps {
-  tester: boolean;
-}
+class Menu extends React.Component<MenuProps> {
 
-// noinspection JSUnusedGlobalSymbols
-export default class extends React.Component<MenuProps> {
-
-  static async getInitialProps(): Promise<MenuInitialPropsWrapper> {
-    const data = await fetch(`http://localhost:3000${MENU_PROPS_PATH}`, { cache: 'force-cache' });
-    const json = await data.json();
-    return {
-      json,
-      id: 'Menu'
-    };
-  }
-
-  renderItems(menuCategoryItems: (MenuCategoryItemsEntity)[] | any) {
+  static renderItems(menuCategoryItems: (MenuCategoryItemsEntity)[] | any) {
     if (menuCategoryItems) {
       return menuCategoryItems.map((item: MenuCategoryItemsEntity) => {
         return (
@@ -44,14 +24,14 @@ export default class extends React.Component<MenuProps> {
     }
   }
 
-  renderCategories(menuCategories: EntryCollection<MenuCategory>) {
-    return menuCategories.items.map((menuCategory) => {
+  renderCategories() {
+    return this.props.menuCategories.items.map((menuCategory) => {
       const { title, menuCategoryItems } = menuCategory.fields;
       return (
         <div key={title}>
           <h2>{title}</h2>
           <ul>
-            {this.renderItems(menuCategoryItems)}
+            {Menu.renderItems(menuCategoryItems)}
           </ul>
         </div>);
     });
@@ -59,14 +39,20 @@ export default class extends React.Component<MenuProps> {
 
   render() {
     return (
-      <InitPropsContext.Consumer>
-        {initProps => (
-          <div>
-            <h1>Menu</h1>
-            {this.renderCategories(initProps.Menu.menuCategories)}
-          </div>
-        )}
-      </InitPropsContext.Consumer>
+      <div>
+        <h1>Menu</h1>
+        {this.renderCategories()}
+      </div>
+
     );
   }
 }
+
+const getInitialProps = async () => {
+  const data = await fetch(`http://localhost:3000${MENU_PROPS_PATH}`, { cache: 'force-cache' });
+  return data.json();
+};
+
+const menuWithInitialProps = withInitialProps(Menu, getInitialProps);
+
+export default menuWithInitialProps;

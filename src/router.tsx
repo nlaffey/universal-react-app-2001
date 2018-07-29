@@ -2,7 +2,7 @@ import * as universalRouter from 'universal-router';
 import * as React from 'react';
 import AppContainer, { AppContainerInitialProps } from './components/AppContainer';
 import StyleContextProvider from './components/StyleContextProvider';
-import Menu, { MenuInitialProps } from './components/Menu';
+import Menu, { MenuProps } from './components/Menu';
 
 export const cssSet = new Set();
 export const insertCss = (...styles) => {
@@ -32,7 +32,7 @@ const context: AppContext = {
 
 interface InitPropsDefaultValue {
   AppContainer: AppContainerInitialProps;
-  Menu: MenuInitialProps;
+  Menu: MenuProps;
 }
 
 export const InitPropsContext = React.createContext<InitPropsDefaultValue>(
@@ -46,27 +46,40 @@ export const routes = [
   {
     path: '/',
     action: routerContext => (
-      <InitPropsContext.Provider value={routerContext.initialProps}>
-        <StyleContextProvider context={context}>
-          <AppContainer>
-            <h2>Home</h2>
-          </AppContainer>
-        </StyleContextProvider>
-      </InitPropsContext.Provider>
+      <RouteContextWrapper initialProps={routerContext.initialProps}>
+        <AppContainer>
+          <h2>Home</h2>
+        </AppContainer>
+      </RouteContextWrapper>
     ),
   },
   {
     path: '/menu',
     action: routerContext => (
-      <InitPropsContext.Provider value={routerContext.initialProps}>
-        <StyleContextProvider context={context}>
-          <AppContainer>
-            <Menu tester={true}/>
-          </AppContainer>
-        </StyleContextProvider>
-      </InitPropsContext.Provider>),
+      <RouteContextWrapper initialProps={routerContext.initialProps}>
+        <AppContainer>
+          <Menu/>
+        </AppContainer>
+      </RouteContextWrapper>
+    ),
   },
 ];
+
+
+interface AppWrapperProps {
+  initialProps: any;
+}
+
+class RouteContextWrapper extends React.Component<AppWrapperProps> {
+  render() {
+    return (
+      <InitPropsContext.Provider value={this.props.initialProps}>
+        <StyleContextProvider context={context}>
+          {this.props.children}
+        </StyleContextProvider>
+      </InitPropsContext.Provider>);
+  }
+}
 
 // TODO: Fix type hack.
 // noinspection TsLint
