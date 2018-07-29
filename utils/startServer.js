@@ -1,5 +1,5 @@
 const http = require('http');
-const SERVER_PORT_NUMBER = 8080;
+const SERVER_PORT_NUMBER = process.env.PORT || 3000;
 
 let server;
 
