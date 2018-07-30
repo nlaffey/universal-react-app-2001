@@ -15,7 +15,7 @@ function recursiveMap(children, fn) {
   });
 }
 
-export const getInitialProps = async (component) => {
+export const getInitialProps = async (component, port) => {
   const promises = [];
 
   recursiveMap(component, (child) => {
@@ -24,7 +24,7 @@ export const getInitialProps = async (component) => {
     }
 
     if (child.type.ComposedComponent && child.type.ComposedComponent.getInitialProps) {
-      promises.push(child.type.ComposedComponent.getInitialProps().then(async (results) => {
+      promises.push(child.type.ComposedComponent.getInitialProps(port).then(async (results) => {
         return {
           data: results,
           id: child.name

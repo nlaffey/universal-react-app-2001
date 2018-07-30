@@ -7,8 +7,8 @@ export const withInitialProps = (ComposedComponent, initialProps) => {
       static ComposedComponent: any;
       static contextTypes: any;
 
-      static async getInitialProps() {
-        const data = await initialProps();
+      static async getInitialProps(port) {
+        const data = await initialProps(port);
         return {
           data,
           id: ComposedComponent.name

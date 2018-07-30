@@ -35,7 +35,7 @@ export const setupApp = () => {
     const resolveObject = { pathname, context };
     router.resolve(resolveObject).then(async (component) => {
       try {
-        const initialProps = await getInitialProps(component);
+        const initialProps = await getInitialProps(component, app.locals.port);
         const resolveObjectWithProps = { ...resolveObject, initialProps };
         router.resolve(resolveObjectWithProps).then((componentWithProps) => {
           const componentHtml = renderToString(componentWithProps);

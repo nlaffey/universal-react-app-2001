@@ -3,7 +3,7 @@ import { EntryCollection } from 'contentful';
 import { MenuCategory, MenuCategoryItemsEntity } from '../typings/contentful/MenuCategory';
 import { MENU_PROPS_PATH } from '../constants/pathNames';
 import { withInitialProps } from './WithInitialProps';
-import { getInitialPropsData, getInitialPropsUrl } from '../utils/environment';
+import { getInitialPropsData } from '../utils/environment';
 
 export interface MenuProps {
   menuCategories: EntryCollection<MenuCategory>;
@@ -48,7 +48,7 @@ class Menu extends React.Component<MenuProps> {
   }
 }
 
-const getInitialProps = async () => getInitialPropsData(MENU_PROPS_PATH);
+const getInitialProps = async port => getInitialPropsData(MENU_PROPS_PATH, port);
 
 const menuWithInitialProps = withInitialProps(Menu, getInitialProps);
 

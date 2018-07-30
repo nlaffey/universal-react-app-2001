@@ -1,13 +1,12 @@
 import * as React from 'react';
-import * as fetch from 'isomorphic-fetch';
 import { Brand } from '../typings/contentful/Brand';
 import Navigation from './Navigation';
 import { Entry } from 'contentful';
 import Footer from './Footer';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import { APP_CONTAINER_PROPS_PATH, MENU_PROPS_PATH } from '../constants/pathNames';
+import { APP_CONTAINER_PROPS_PATH } from '../constants/pathNames';
 import { withInitialProps } from './WithInitialProps';
-import { getApiUrl, getInitialPropsData, getInitialPropsUrl } from '../utils/environment';
+import { getInitialPropsData } from '../utils/environment';
 
 const styles = require('./AppContainer.css');
 
