@@ -25,7 +25,7 @@ export function getInitialPropsUrl(pathName: string) {
  * TODO: Think of better names for these functions. Having getInitialProps wrap
  * getInitialPropsData feels too similar
  */
-export async function getInitialgPropsData(pathName: string) {
+export async function getInitialPropsData(pathName: string) {
   const url = getInitialPropsUrl(pathName);
   const data = await fetch(url, { cache: 'force-cache' });
   return data.json();
