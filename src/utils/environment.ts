@@ -11,7 +11,7 @@ export function getApiUrl() {
 
 export function getPort() {
   let port = '3000';
-  if (process && process.env && process.env.port) {
+  if (process && process.env && process.env.PORT) {
     port = process.env.PORT;
   }
   return port;
