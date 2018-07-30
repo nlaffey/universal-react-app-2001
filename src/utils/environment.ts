@@ -27,6 +27,7 @@ export function getInitialPropsUrl(pathName: string) {
  */
 export async function getInitialPropsData(pathName: string) {
   const url = getInitialPropsUrl(pathName);
+  console.log(`getInitialPropsUrl()${url}`);
   const data = await fetch(url, { cache: 'force-cache' });
   return data.json();
 }
