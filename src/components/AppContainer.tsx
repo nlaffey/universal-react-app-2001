@@ -34,7 +34,7 @@ class AppContainer extends React.Component<AppContainerInitialProps, AppContaine
   }
 }
 
-const getInitialProps = async () => getInitialPropsData(APP_CONTAINER_PROPS_PATH);
+const getInitialProps = async port => getInitialPropsData(APP_CONTAINER_PROPS_PATH, port);
 
 const AppContainerWithInitialProps = withInitialProps(AppContainer, getInitialProps);
 const AppContainerWithStylesAndInitialProps = withStyles(styles)(AppContainerWithInitialProps);

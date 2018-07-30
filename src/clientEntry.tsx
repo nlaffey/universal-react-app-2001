@@ -37,7 +37,7 @@ const renderRoute = (location: Location) => {
     if (isInitialRender) {
       initialProps = window.initialProps;
     } else {
-      initialProps = await getInitialProps(component);
+      initialProps = await getInitialProps(component, null);
     }
     const resolveObjectWithProps = { ...resolveObject, initialProps };
     router.resolve(resolveObjectWithProps).then((componentWithProps) => {
