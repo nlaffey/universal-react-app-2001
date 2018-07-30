@@ -1,7 +1,5 @@
 const http = require('http');
-const SERVER_PORT_NUMBER = process.env.PORT || 3000;
-
-console.log(`process.env.port:${process.env.PORT}`);
+const port = process.env.PORT || 3000;
 
 let server;
 
@@ -9,9 +7,9 @@ function createServer() {
   let serverDistFilePath = '../dist/server.js';
   delete require.cache[require.resolve(serverDistFilePath)];
   const { setupApp } = require(serverDistFilePath);
-  server = http.createServer(setupApp());
-  server.listen(SERVER_PORT_NUMBER, () => {
-    console.log(`Listening on port: ${SERVER_PORT_NUMBER}`);
+  server = http.createServer(setupApp(port));
+  server.listen(port, () => {
+    console.log(`Listening on port: ${port}`);
   });
 }
 

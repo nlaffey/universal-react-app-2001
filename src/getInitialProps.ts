@@ -20,7 +20,7 @@ export const getInitialProps = async (component, port) => {
 
   recursiveMap(component, (child) => {
     if (child.type.getInitialProps) {
-      promises.push(child.type.getInitialProps());
+      promises.push(child.type.getInitialProps(port));
     }
 
     if (child.type.ComposedComponent && child.type.ComposedComponent.getInitialProps) {

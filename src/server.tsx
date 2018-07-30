@@ -23,7 +23,7 @@ const bundlePath = '/public/bundle.js';
 const fullBundleUrl = path.join(assetDomain, bundlePath);
 
 // noinspection JSUnusedGlobalSymbols -- Used in startServer.js
-export const setupApp = () => {
+export const setupApp = (port) => {
 
   const app = express();
 
@@ -35,7 +35,7 @@ export const setupApp = () => {
     const resolveObject = { pathname, context };
     router.resolve(resolveObject).then(async (component) => {
       try {
-        const initialProps = await getInitialProps(component, app.locals.port);
+        const initialProps = await getInitialProps(component, port);
         const resolveObjectWithProps = { ...resolveObject, initialProps };
         router.resolve(resolveObjectWithProps).then((componentWithProps) => {
           const componentHtml = renderToString(componentWithProps);
