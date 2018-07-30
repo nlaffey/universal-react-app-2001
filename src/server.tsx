@@ -51,7 +51,7 @@ export const setupApp = () => {
     });
   });
 
-  app.get(APP_CONTAINER_PROPS_PATH, async (req, res) => {
+  app.get('/' + APP_CONTAINER_PROPS_PATH, async (req, res) => {
     const brand = await getEntry<Brand>('3I483EqYbKMaQqwS6wWY0e');
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Cache-Control', 'public, max-age=31536000');
@@ -61,7 +61,7 @@ export const setupApp = () => {
     res.send(JSON.stringify(dataResponseObject));
   });
 
-  app.get(MENU_PROPS_PATH, async (req, res) => {
+  app.get('/' + MENU_PROPS_PATH, async (req, res) => {
     const menuCategories = await getEntriesOfType<MenuCategory>(typeIds.MenuCategory);
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Cache-Control', 'public, max-age=31536000');

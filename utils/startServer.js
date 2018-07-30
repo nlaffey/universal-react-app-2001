@@ -1,6 +1,8 @@
 const http = require('http');
 const SERVER_PORT_NUMBER = process.env.PORT || 3000;
 
+console.log(`process.env.port:${process.env.PORT}`);
+
 let server;
 
 function createServer() {

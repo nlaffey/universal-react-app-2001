@@ -5,8 +5,9 @@ import Navigation from './Navigation';
 import { Entry } from 'contentful';
 import Footer from './Footer';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import { APP_CONTAINER_PROPS_PATH } from '../constants/pathNames';
+import { APP_CONTAINER_PROPS_PATH, MENU_PROPS_PATH } from '../constants/pathNames';
 import { withInitialProps } from './WithInitialProps';
+import { getApiUrl, getInitialPropsData, getInitialPropsUrl } from '../utils/environment';
 
 const styles = require('./AppContainer.css');
 
@@ -22,11 +23,10 @@ export interface AppContainerState {
 class AppContainer extends React.Component<AppContainerInitialProps, AppContainerState> {
 
   render() {
-
     return (
       <div className={styles.container}>
         <Navigation/>
-        {/*<h1>App container for {companyName}</h1>*/}
+        <h1>App container for {this.props.brand.fields.companyName}</h1>
         <div>
           {this.props.children}
           <Footer/>
@@ -35,11 +35,7 @@ class AppContainer extends React.Component<AppContainerInitialProps, AppContaine
   }
 }
 
-const getInitialProps = async () => {
-  const { apiPath } : any = window;
-  const data = await fetch(`${apiPath}${APP_CONTAINER_PROPS_PATH}`, { cache: 'force-cache' });
-  return data.json();
-};
+const getInitialProps = async () => getInitialPropsData(APP_CONTAINER_PROPS_PATH);
 
 const AppContainerWithInitialProps = withInitialProps(AppContainer, getInitialProps);
 const AppContainerWithStylesAndInitialProps = withStyles(styles)(AppContainerWithInitialProps);

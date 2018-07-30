@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node $NODE_DEBUG_OPTION ./utils/startDevelopment.js",
+    "dev": "PORT=3000 node $NODE_DEBUG_OPTION ./utils/startDevelopment.js",
     "start": "NODE_ENV=production node $NODE_DEBUG_OPTION ./utils/startProduction.js ",
     "updateTypings": "node ./dist/updateTypings",
     "buildUtils": "webpack --config webpack.utils.js",
