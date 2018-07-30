@@ -25,7 +25,8 @@ class AppContainer extends React.Component<AppContainerInitialProps, AppContaine
     return (
       <div className={styles.container}>
         <Navigation/>
-        <h1>App container for {this.props.brand.fields.companyName}</h1>
+        <h1>App container</h1>
+        <div>{JSON.stringify(this.props.brand)}
         <div>
           {this.props.children}
           <Footer/>
