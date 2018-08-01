@@ -42,9 +42,9 @@ const renderRoute = (location: Location) => {
     const resolveObjectWithProps = { ...resolveObject, initialProps };
     router.resolve(resolveObjectWithProps).then((componentWithProps) => {
       if (isInitialRender) {
-        ReactDOM.render(componentWithProps, mountingPoint);
+        ReactDOM.hydrate(componentWithProps, mountingPoint);
       } else {
-        ReactDOM.render(componentWithProps, mountingPoint);
+        ReactDOM.hydrate(componentWithProps, mountingPoint);
       }
 
     });
