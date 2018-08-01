@@ -22,6 +22,7 @@ export interface AppContainerState {
 class AppContainer extends React.Component<AppContainerInitialProps, AppContainerState> {
 
   render() {
+    console.log(`AppContainerRenderProps:${this.props}`);
     const { brand } = this.props;
     const companyName = brand ? brand.fields.companyName : 'Loading...';
     return (
