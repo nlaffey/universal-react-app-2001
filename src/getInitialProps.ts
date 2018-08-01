@@ -37,6 +37,7 @@ export const getInitialProps = async (component, port) => {
 
   const flatResult = {};
   resolvedPromises.forEach((result) => {
+    console.log(`${result.id}:${JSON.stringify(result.data)}`);
     flatResult[result.id] = result.data;
   });
 
