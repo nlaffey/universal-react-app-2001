@@ -37,6 +37,7 @@ export const setupApp = (port) => {
       try {
         const initialProps = await getInitialProps(component, port);
         const resolveObjectWithProps = { ...resolveObject, initialProps };
+        console.log(`resolveObjectWithProps: ${JSON.stringify(resolveObjectWithProps)}`);
         router.resolve(resolveObjectWithProps).then((componentWithProps) => {
           const componentHtml = renderToString(componentWithProps);
           const css = getRouteCss();
