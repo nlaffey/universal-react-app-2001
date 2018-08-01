@@ -24,12 +24,11 @@ class AppContainer extends React.Component<AppContainerInitialProps, AppContaine
   render() {
     console.log(`AppContainerRenderProps:${JSON.stringify(this.props)}`);
     const { brand } = this.props;
-    const companyName = brand ? brand.fields.companyName : 'Loading...';
     return (
       <div className={styles.container}>
         <Navigation/>
         <h1>App container</h1>
-        <div>{companyName}</div>
+        <div>{JSON.stringify(brand)}</div>
         <div>
           {this.props.children}
           <Footer/>

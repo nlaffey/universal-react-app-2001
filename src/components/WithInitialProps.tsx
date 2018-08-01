@@ -2,6 +2,7 @@ import * as React from 'react';
 import { InitPropsContext } from '../router';
 
 export const withInitialProps = (ComposedComponent, initialProps) => {
+
     class WithInitialProps extends React.Component {
       static displayName: string;
       static ComposedComponent: any;
