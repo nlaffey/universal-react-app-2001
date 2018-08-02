@@ -40,6 +40,7 @@ export const setupApp = (port) => {
         console.log(`resolveObjectWithProps: ${JSON.stringify(resolveObjectWithProps)}`);
         router.resolve(resolveObjectWithProps).then((componentWithProps) => {
           const componentHtml = renderToString(componentWithProps);
+          console.log(`componentHtml:${componentHtml}`);
           const css = getRouteCss();
           const html = renderRootTemplate(componentHtml, fullBundleUrl, initialProps, css);
           res.send(html);
