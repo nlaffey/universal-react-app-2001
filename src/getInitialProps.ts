@@ -27,7 +27,7 @@ export const getInitialProps = async (component, port) => {
       promises.push(child.type.ComposedComponent.getInitialProps(port).then(async (results) => {
         return {
           data: results,
-          id: child.name
+          id: child.initialPropsId
         };
       }));
     }
@@ -37,7 +37,6 @@ export const getInitialProps = async (component, port) => {
 
   const flatResult = {};
   resolvedPromises.forEach((result) => {
-    console.log(`${result.id}:${JSON.stringify(result.data)}`);
     flatResult[result.id] = result.data;
   });
 

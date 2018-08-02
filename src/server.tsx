@@ -40,11 +40,9 @@ export const setupApp = (port) => {
         console.log(`resolveObjectWithProps: ${JSON.stringify(resolveObjectWithProps)}`);
         router.resolve(resolveObjectWithProps).then((componentWithProps) => {
           const componentHtml = renderToString(componentWithProps);
-          const componentHtmlWrappedInRoot = `<div id="root">${componentHtml}</div>`;
-          console.log(`componentHtmlWrappedInRoot:${componentHtmlWrappedInRoot}`);
           console.log(`componentHtml:${componentHtml}`);
           const css = getRouteCss();
-          const html = renderRootTemplate(componentHtmlWrappedInRoot, fullBundleUrl, initialProps, css);
+          const html = renderRootTemplate(componentHtml, fullBundleUrl, initialProps, css);
           res.send(html);
         });
       } catch (err) {

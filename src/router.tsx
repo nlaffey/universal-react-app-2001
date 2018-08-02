@@ -45,13 +45,16 @@ export const InitPropsContext = React.createContext<InitPropsDefaultValue>(
 export const routes = [
   {
     path: '/',
-    action: routerContext => (
-      <RouteContextWrapper initialProps={routerContext.initialProps}>
-        <AppContainer>
-          <h2>Home</h2>
-        </AppContainer>
-      </RouteContextWrapper>
-    ),
+    action: (routerContext) => {
+      console.log(`routerContext.initialProps:${JSON.stringify(routerContext.initialProps)}`);
+      return (
+        <RouteContextWrapper initialProps={routerContext.initialProps}>
+          <AppContainer>
+            <h2>Home</h2>
+          </AppContainer>
+        </RouteContextWrapper>
+      );
+    },
   },
   {
     path: '/menu',
@@ -72,6 +75,7 @@ interface AppWrapperProps {
 
 class RouteContextWrapper extends React.Component<AppWrapperProps> {
   render() {
+    console.log(`RouteContextWrapper initial props:${JSON.stringify(this.props.initialProps)}`);
     return (
       <InitPropsContext.Provider value={this.props.initialProps}>
         <StyleContextProvider context={context}>

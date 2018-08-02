@@ -12,7 +12,7 @@ export const withInitialProps = (ComposedComponent, initialProps) => {
         const data = await initialProps(port);
         return {
           data,
-          id: ComposedComponent.name
+          id: ComposedComponent.initialPropsId
         };
       }
 
@@ -20,7 +20,12 @@ export const withInitialProps = (ComposedComponent, initialProps) => {
         return (
           <InitPropsContext.Consumer>
             {(initProps) => {
-              const componentInitialProps = initProps[ComposedComponent.name];
+              console.log(`ComposedComponent.name:${ComposedComponent.name}`);
+              console.log(`allInitialProps:${JSON.stringify(initProps)}`);
+              const componentInitialProps = initProps[ComposedComponent.initialPropsId];
+              if (!componentInitialProps) {
+                console.warn(`No initial props found for ${ComposedComponent.initialPropsId}`);
+             }
               const props = { ...this.props, ...componentInitialProps };
               let composedComponent;
               try {

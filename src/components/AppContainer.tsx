@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Brand } from '../typings/contentful/Brand';
-import Navigation from './Navigation';
 import { Entry } from 'contentful';
-import Footer from './Footer';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import { APP_CONTAINER_PROPS_PATH } from '../constants/pathNames';
 import { withInitialProps } from './WithInitialProps';
@@ -21,21 +19,18 @@ export interface AppContainerState {
 
 class AppContainer extends React.Component<AppContainerInitialProps, AppContainerState> {
 
+  public static initialPropsId: string = 'AppContainerInitialProps';
+
   render() {
     console.log(`AppContainerRenderProps:${JSON.stringify(this.props)}`);
     const { brand } = this.props;
     return (
-      <div className={styles.container}>
-        {/*<Navigation/>*/}
-        <h1>App container</h1>
-        <div>{brand.fields.companyName}</div>
-        {/*<div>*/}
-          {/*{this.props.children}*/}
-          {/*<Footer/>*/}
-        {/*</div>*/}
-      </div>);
+      <span id="mounting-point" className={styles.container}>
+        {brand.fields.companyName}
+      </span>);
   }
 }
+
 
 const getInitialProps = async port => getInitialPropsData(APP_CONTAINER_PROPS_PATH, port);
 
