@@ -8,7 +8,7 @@ export const renderRootTemplate = (contentHtml, fullBundleUrl, props, styles) =>
         </style>
       </head>
       <body>
-        ${contentHtml}
+        <div id="root">${contentHtml}</div>
         <script type="text/javascript">
         window.initialProps = ${JSON.stringify(props)}
         window.apiPath = ${process.env.PORT}

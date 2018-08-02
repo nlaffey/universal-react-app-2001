@@ -6,6 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d88a9422-32e9-45cb-9aa3-d321963ce215" name="Default" comment="Adding additional logging">
+      <change beforePath="$PROJECT_DIR$/src/server.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,7 +47,7 @@
           <entry key="gitignore" value="11" />
           <entry key="html" value="1" />
           <entry key="ts" value="132" />
-          <entry key="tsx" value="300" />
+          <entry key="tsx" value="368" />
           <entry key="txt" value="27" />
         </counts>
       </usages-collector>
@@ -55,7 +56,7 @@
           <entry key="PLAIN_TEXT" value="38" />
           <entry key="Scratch" value="1" />
           <entry key="TypeScript" value="132" />
-          <entry key="TypeScript JSX" value="300" />
+          <entry key="TypeScript JSX" value="368" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -80,11 +81,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+            <state relative-caret-position="258">
+              <caret line="34" column="48" lean-forward="true" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -92,17 +93,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/templates.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
               <folding>
-                <marker date="1533168903408" expanded="true" signature="118:513" ph="..." />
-                <marker date="1533168903408" expanded="true" signature="131:244" ph="..." />
-                <marker date="1533168903408" expanded="true" signature="195:230" ph="..." />
-                <marker date="1533168903408" expanded="true" signature="257:501" ph="..." />
-                <marker date="1533168903408" expanded="true" signature="320:438" ph="..." />
+                <marker date="1533169159867" expanded="true" signature="118:534" ph="..." />
+                <marker date="1533169159867" expanded="true" signature="131:244" ph="..." />
+                <marker date="1533169159867" expanded="true" signature="195:230" ph="..." />
+                <marker date="1533169159867" expanded="true" signature="257:522" ph="..." />
+                <marker date="1533169159867" expanded="true" signature="341:459" ph="..." />
               </folding>
             </state>
           </provider>
@@ -287,8 +288,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.json" />
         <option value="$PROJECT_DIR$/src/components/AppContainer.tsx" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.html" />
-        <option value="$PROJECT_DIR$/src/server.tsx" />
         <option value="$PROJECT_DIR$/src/templates.ts" />
+        <option value="$PROJECT_DIR$/src/server.tsx" />
       </list>
     </option>
   </component>
@@ -559,7 +560,7 @@
       <workItem from="1529772176896" duration="877000" />
       <workItem from="1532875241645" duration="14607000" />
       <workItem from="1532914353185" duration="2564000" />
-      <workItem from="1533165330293" duration="3576000" />
+      <workItem from="1533165330293" duration="3958000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1523405584419</created>
@@ -628,7 +629,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217276000" />
+    <option name="totallyTimeSpent" value="217658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="0" width="1920" height="1080" extended-state="6" />
@@ -1145,26 +1146,26 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server.tsx">
+    <entry file="file://$PROJECT_DIR$/src/templates.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1533169159867" expanded="true" signature="118:534" ph="..." />
+            <marker date="1533169159867" expanded="true" signature="131:244" ph="..." />
+            <marker date="1533169159867" expanded="true" signature="195:230" ph="..." />
+            <marker date="1533169159867" expanded="true" signature="257:522" ph="..." />
+            <marker date="1533169159867" expanded="true" signature="341:459" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates.ts">
+    <entry file="file://$PROJECT_DIR$/src/server.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="258">
+          <caret line="34" column="48" lean-forward="true" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
           <folding>
-            <marker date="1533168903408" expanded="true" signature="118:513" ph="..." />
-            <marker date="1533168903408" expanded="true" signature="131:244" ph="..." />
-            <marker date="1533168903408" expanded="true" signature="195:230" ph="..." />
-            <marker date="1533168903408" expanded="true" signature="257:501" ph="..." />
-            <marker date="1533168903408" expanded="true" signature="320:438" ph="..." />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
