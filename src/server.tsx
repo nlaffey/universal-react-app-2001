@@ -42,7 +42,7 @@ export const setupApp = (port) => {
           const componentHtml = renderToString(componentWithProps);
           console.log(`componentHtml:${componentHtml}`);
           const css = getRouteCss();
-          const html = renderRootTemplate(componentHtml, fullBundleUrl, initialProps, css);
+          const html = renderRootTemplate('<span>test</span>', fullBundleUrl, initialProps, css);
           res.send(html);
         });
       } catch (err) {
