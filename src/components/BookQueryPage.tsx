@@ -6,14 +6,14 @@ import { BookQueryResponseJson } from '../typings/googleApi/book';
 const DEFAULT_QUERY = '2001';
 
 interface BookQueryPageInitialProps {
-  bookQueryResponse: BookQueryResponseJson;
+  bookQueryResponse: any;
 }
 
 interface BookQueryPageProps extends BookQueryPageInitialProps {
 }
 
 interface Page1State {
-  bookQueryResponse: BookQueryResponseJson;
+  bookQueryResponse: any;
   query: string;
 }
 
