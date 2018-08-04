@@ -18,7 +18,10 @@ class AppContainer extends React.Component<AppContainerInitialProps> {
   render() {
     const { brand } = this.props;
     return (
-      <div className={styles.container}><h1>{brand.fields.siteName}</h1></div>);
+      <div className={styles.container}>
+        <h1>{brand.fields.siteName}</h1>
+        {this.props.children}
+      </div>);
   }
 }
 

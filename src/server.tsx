@@ -19,7 +19,6 @@ const fullBundleUrl = path.join(assetDomain, bundlePath);
 
 // noinspection JSUnusedGlobalSymbols -- Used in startServer.js
 export const setupApp = (port) => {
-
   const app = express();
 
   app.use(compression());
@@ -39,11 +38,13 @@ export const setupApp = (port) => {
           res.send(html);
         });
       } catch (err) {
+        // TODO: Handle this more gracefully in production
         res.send(err.stack);
       }
     }).catch((err) => {
-      console.warn(err);
-
+      if (err.status !== 404) {
+        console.error(err);
+      }
       next();
     });
   });
