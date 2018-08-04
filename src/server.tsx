@@ -3,14 +3,11 @@ import * as React from 'react';
 import * as path from 'path';
 import * as compression from 'compression';
 import { renderToString } from 'react-dom/server';
-import { Brand } from './typings/contentful/Brand';
-import { getEntry } from './contentful/service';
 import { router, getRouteCss, insertCss } from './router';
 import { getInitialProps } from './getInitialProps';
-import { AppContainerInitialProps } from './components/AppContainer';
-import { APP_CONTAINER_PROPS_PATH } from './constants/pathNames';
 import { renderIndexHtmlTemplate } from './index-html-template';
-import { contentIds } from './contentful/typeIds';
+import { getEntry } from './contentful/service';
+import { CONTENTFUL_ENTRY_ID_PATH } from './constants/pathnames';
 
 declare var global: {
   appRootPath: string,
@@ -44,19 +41,19 @@ export const setupApp = (port) => {
       } catch (err) {
         res.send(err.stack);
       }
-    }).catch(() => {
+    }).catch((err) => {
+      console.warn(err);
+
       next();
     });
   });
 
-  app.get('/' + APP_CONTAINER_PROPS_PATH, async (req, res) => {
-    const brand = await getEntry<Brand>(contentIds.brand);
+  app.get(CONTENTFUL_ENTRY_ID_PATH, async (req, res) => {
+    const { entryId } = req.params;
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Cache-Control', 'public, max-age=31536000');
-    const dataResponseObject: AppContainerInitialProps = {
-      brand
-    };
-    res.send(JSON.stringify(dataResponseObject));
+    const entryData = await getEntry(entryId);
+    res.send(JSON.stringify(entryData));
   });
 
   const publicPath = path.resolve(global.appRootPath, './public');

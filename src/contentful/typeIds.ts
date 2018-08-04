@@ -6,4 +6,4 @@ export const typeIds = {
 export const contentIds = {
   // https://app.contentful.com/spaces/pjukj3n70qtm/entries/P2ftMcLxsI4iUcqCIiuU4
   brand: 'P2ftMcLxsI4iUcqCIiuU4'
-}
+};

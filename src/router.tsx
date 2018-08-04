@@ -3,6 +3,7 @@ import * as React from 'react';
 import AppContainer, { AppContainerInitialProps } from './components/AppContainer';
 import StyleContextProvider from './components/StyleContextProvider';
 import Home from './components/Home';
+import { ROOT_PATH } from './constants/pathnames';
 
 export const cssSet = new Set();
 export const insertCss = (...styles) => {
@@ -42,12 +43,12 @@ export const InitPropsContext = React.createContext<InitPropsDefaultValue>(
 
 export const routes = [
   {
-    path: '/',
+    path: ROOT_PATH,
     action: (routerContext) => {
       return (
         <RouteContextWrapper initialProps={routerContext.initialProps}>
           <AppContainer>
-            <h2>Home</h2>
+            <h1>Root</h1>
           </AppContainer>
         </RouteContextWrapper>
       );

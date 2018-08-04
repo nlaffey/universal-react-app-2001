@@ -1,6 +1,6 @@
 import * as fetch from 'isomorphic-fetch';
 
-export function getApiUrl(port) {
+export function getLocalApiRootUrl(port) {
   let url = `http://localhost:${port}`;
   if (typeof window !== 'undefined') {
     const { protocol, host } = window.location;
@@ -9,16 +9,11 @@ export function getApiUrl(port) {
   return url;
 }
 
-export function getInitialPropsUrl(pathName: string, port) {
-  return `${getApiUrl(port)}/${pathName}`;
+export function getLocalApiUrl(path: string, port) {
+  return `${getLocalApiRootUrl(port)}${path}`;
 }
 
-/**
- * TODO: Think of better names for these functions. Having getInitialProps wrap
- * getInitialPropsData feels too similar
- */
-export async function getInitialPropsData(pathName: string, port) {
-  const url = getInitialPropsUrl(pathName, port);
-  const data = await fetch(url, { cache: 'force-cache' });
-  return data.json();
+export async function localApiFetch(pathname: string, port): Promise<Response> {
+  const url = getLocalApiUrl(pathname, port);
+  return fetch(url, { cache: 'force-cache' });
 }
