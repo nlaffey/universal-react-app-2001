@@ -1,10 +1,10 @@
 import * as universalRouter from 'universal-router';
 import * as React from 'react';
 import AppContainer from './components/AppContainer';
-import { PAGE1_PATH, ROOT_PATH } from './constants/pathnames';
+import { BOOK_QUERY_PATH, ROOT_PATH } from './constants/pathnames';
 import Navigation from './components/Navigation';
-import Page1 from './components/Page1';
 import Root from './components/Root';
+import BookQueryPage from './components/BookQueryPage';
 import RouteContextWrapper from './components/RouteContextWrapper';
 
 // TODO: Reduce the boilerplate of the wrapper components while still keeping it easily configurable
@@ -23,12 +23,12 @@ export const routes = [
     }
   },
   {
-    path: PAGE1_PATH,
+    path: BOOK_QUERY_PATH,
     action: routerContext => (
       <RouteContextWrapper initialProps={routerContext.initialProps}>
         <AppContainer>
           <Navigation/>
-          <Page1/>
+          <BookQueryPage/>
         </AppContainer>
       </RouteContextWrapper>
     )

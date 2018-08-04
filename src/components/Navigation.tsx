@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PAGE1_PATH, ROOT_PATH } from '../constants/pathnames';
+import { BOOK_QUERY_PATH, ROOT_PATH } from '../constants/pathnames';
 import appHistory from '../appHistory';
 
 interface NavigationProps {
@@ -8,10 +8,10 @@ interface NavigationProps {
 class Navigation extends React.Component<NavigationProps> {
   constructor(props) {
     super(props);
-    this.handleNavigationClick = this.handleNavigationClick.bind(this);
+    Navigation.handleNavigationClick = Navigation.handleNavigationClick.bind(this);
   }
 
-  handleNavigationClick(pathname: string, event): void {
+  static handleNavigationClick(pathname: string, event): void {
     event.preventDefault();
     appHistory.push(pathname);
   }
@@ -21,13 +21,13 @@ class Navigation extends React.Component<NavigationProps> {
     const rootLinkProps = {
       href: ROOT_PATH,
       onClick: (event) => {
-        this.handleNavigationClick(ROOT_PATH, event);
+        Navigation.handleNavigationClick(ROOT_PATH, event);
       }
     };
     const page1LinkProps = {
-      href: PAGE1_PATH,
+      href: BOOK_QUERY_PATH,
       onClick: (event) => {
-        this.handleNavigationClick(PAGE1_PATH, event);
+        Navigation.handleNavigationClick(BOOK_QUERY_PATH, event);
       }
     };
     return (
@@ -38,7 +38,7 @@ class Navigation extends React.Component<NavigationProps> {
             <a {...rootLinkProps}>Root</a>
           </li>
           <li>
-            <a {...page1LinkProps}>Page1</a>
+            <a {...page1LinkProps}>Books</a>
           </li>
         </ul>
       </div>

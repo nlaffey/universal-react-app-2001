@@ -31,6 +31,7 @@ async function getInitialProps(port): Promise<AppContainerInitialProps> {
   return { brand };
 }
 
+// TODO: Type withInitialProps to make sure component matches getInitialsProps
 const AppContainerWithInitialProps = withInitialProps(AppContainer, 'AppContainer', getInitialProps);
 const AppContainerWithStylesAndInitialProps = withStyles(styles)(AppContainerWithInitialProps);
 

@@ -17,6 +17,7 @@ function createDataJsonFiles(path: string, data) {
 }
 
 // TODO: Limit query to just get 1. That's all we need.
+// TODO: Make this more generic so other services can use it
 function updateTypingsByEntryId(interfaceName: string, id: string) {
   getEntriesOfType(id).then((data) => {
     const path = `${process.cwd()}/src/typings/contentful/${interfaceName}`;
