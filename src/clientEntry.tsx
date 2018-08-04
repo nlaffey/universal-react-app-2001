@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import * as ReactDOMServer from 'react-dom/server';
-import { insertCss, router } from './router';
+import { router } from './router';
 import history from './history';
 import { getInitialProps } from './getInitialProps';
-
+import { insertCss } from './utils/css';
+import { REACT_MOUNTING_POINT_ID } from './constants/selectors';
 
 declare global {
   // noinspection TsLint
@@ -13,7 +13,8 @@ declare global {
   }
 }
 
-const mountingPoint = document.getElementById('mounting-point');
+const mountingPoint = document.getElementById(REACT_MOUNTING_POINT_ID);
+
 const getResolveObject = (location: Location) => {
   const pathname = location.pathname;
   const context = { insertCss };

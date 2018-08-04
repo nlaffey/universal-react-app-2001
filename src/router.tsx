@@ -1,46 +1,13 @@
 import * as universalRouter from 'universal-router';
 import * as React from 'react';
-import AppContainer, { AppContainerInitialProps } from './components/AppContainer';
-import StyleContextProvider from './components/StyleContextProvider';
-import Home from './components/Home';
-import { ROOT_PATH } from './constants/pathnames';
+import AppContainer from './components/AppContainer';
+import { PAGE1_PATH, ROOT_PATH } from './constants/pathnames';
+import Navigation from './components/Navigation';
+import Page1 from './components/Page1';
+import Root from './components/Root';
+import RouteContextWrapper from './components/RouteContextWrapper';
 
-export const cssSet = new Set();
-export const insertCss = (...styles) => {
-  const isClient = typeof window !== 'undefined';
-  styles.forEach((style) => {
-    if (style._insertCss || style._getCss) {
-      const css = isClient ? style._insertCss() : style._getCss();
-      cssSet.add(css);
-    }
-  });
-};
-
-export const getRouteCss = () => {
-  const cssArray = [];
-  cssSet.forEach(css => cssArray.push(css));
-  return cssArray.join('');
-};
-
-interface AppContext {
-  insertCss?: Function;
-  appContainerProps?: AppContainerInitialProps;
-}
-
-const context: AppContext = {
-  insertCss
-};
-
-interface InitPropsDefaultValue {
-  AppContainer: AppContainerInitialProps;
-}
-
-export const InitPropsContext = React.createContext<InitPropsDefaultValue>(
-  {
-    AppContainer: null
-  }
-);
-
+// TODO: Reduce the boilerplate of the wrapper components while still keeping it easily configurable
 export const routes = [
   {
     path: ROOT_PATH,
@@ -48,38 +15,25 @@ export const routes = [
       return (
         <RouteContextWrapper initialProps={routerContext.initialProps}>
           <AppContainer>
-            <h1>Root</h1>
+            <Navigation/>
+            <Root/>
           </AppContainer>
         </RouteContextWrapper>
       );
     }
   },
   {
-    path: '/home',
+    path: PAGE1_PATH,
     action: routerContext => (
       <RouteContextWrapper initialProps={routerContext.initialProps}>
         <AppContainer>
-          <Home/>
+          <Navigation/>
+          <Page1/>
         </AppContainer>
       </RouteContextWrapper>
     )
   }
 ];
-
-interface AppWrapperProps {
-  initialProps: any;
-}
-
-class RouteContextWrapper extends React.Component<AppWrapperProps> {
-  render() {
-    return (
-      <InitPropsContext.Provider value={this.props.initialProps}>
-        <StyleContextProvider context={context}>
-          {this.props.children}
-        </StyleContextProvider>
-      </InitPropsContext.Provider>);
-  }
-}
 
 // TODO: Fix type hack.
 // noinspection TsLint

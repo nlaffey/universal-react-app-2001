@@ -1,3 +1,5 @@
+import { REACT_MOUNTING_POINT_ID } from './constants/selectors';
+
 export const renderIndexHtmlTemplate = (contentHtml, fullBundleUrl, props, styles) => (
   `<!doctype html>
     <html>
@@ -8,7 +10,7 @@ export const renderIndexHtmlTemplate = (contentHtml, fullBundleUrl, props, style
         </style>
       </head>
       <body>
-      <div id="mounting-point">
+      <div id="${REACT_MOUNTING_POINT_ID}">
         ${contentHtml}
       </div>
       <script type="text/javascript">

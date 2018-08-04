@@ -3,11 +3,12 @@ import * as React from 'react';
 import * as path from 'path';
 import * as compression from 'compression';
 import { renderToString } from 'react-dom/server';
-import { router, getRouteCss, insertCss } from './router';
+import { router} from './router';
 import { getInitialProps } from './getInitialProps';
 import { renderIndexHtmlTemplate } from './index-html-template';
 import { getEntry } from './contentful/service';
 import { CONTENTFUL_ENTRY_ID_PATH } from './constants/pathnames';
+import { getRouteCss, insertCss } from './utils/css';
 
 declare var global: {
   appRootPath: string,

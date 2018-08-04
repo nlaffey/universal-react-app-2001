@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { InitPropsContext } from './RouteContextWrapper';
 
 export const withInitialProps = (ComposedComponent, initialPropsId, initialProps) => {
 
@@ -41,5 +42,3 @@ export const withInitialProps = (ComposedComponent, initialPropsId, initialProps
   WithInitialProps.ComposedComponent = ComposedComponent;
   return WithInitialProps;
 };
-
-import { InitPropsContext } from '../router';

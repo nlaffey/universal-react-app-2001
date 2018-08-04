@@ -1,5 +1,5 @@
 import * as React from 'react';
-import history from '../history';
+import { PAGE1_PATH, ROOT_PATH } from '../constants/pathnames';
 
 interface NavigationProps {
 }
@@ -10,8 +10,10 @@ class Navigation extends React.Component<NavigationProps> {
     return (
       <div>
         <h5>Navigation</h5>
-        <button onClick={() => history.push('/')}>Home</button>
-        <button onClick={() => history.push('/menu')}>Menu</button>
+        <ul>
+          <li><a href={ROOT_PATH}>Root</a></li>
+          <li><a href={PAGE1_PATH}>Page1</a></li>
+        </ul>
       </div>
     );
   }
