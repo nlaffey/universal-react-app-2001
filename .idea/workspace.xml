@@ -1,45 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d88a9422-32e9-45cb-9aa3-d321963ce215" name="Default" comment="Adding additional logging">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/nlaffey.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/nlaffey.xml" afterDir="false" />
+    <list default="true" id="d88a9422-32e9-45cb-9aa3-d321963ce215" name="Default" comment="Everything mostly working with prod deployment&#10;&#10;Stripped out lots of logging, a few errors to resolve. About to make a generic initialProps endpoint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/clientEntry.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/clientEntry.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WithInitialProps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WithInitialProps.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contentful/clientFactory.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contentful/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/contentful/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contentful/typeIds.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/contentful/typeIds.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getInitialProps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/getInitialProps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/RootAppProvider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index-html-template.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/Brand-full.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/Brand.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/Brand.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/MenuCategory-full.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/MenuCategory.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/MenuCategory.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/MenuItem-full.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/MenuItem.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/MenuItem.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/MerchandiseCategory-full.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/MerchandiseCategory.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/MerchandiseCategory.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/MerchandiseItem-full.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/MerchandiseItem.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/contentful/MerchandiseItem.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/npm-run.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/updateTypings.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/updateTypings.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/updateContentfulTypings.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tacocat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/universal-react-app-2001.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,8 +50,8 @@
           <entry key="json" value="52" />
           <entry key="md" value="575" />
           <entry key="ts" value="2625" />
-          <entry key="tsx" value="2515" />
-          <entry key="txt" value="27" />
+          <entry key="tsx" value="2540" />
+          <entry key="txt" value="243" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -96,10 +60,10 @@
           <entry key="JSON" value="52" />
           <entry key="JavaScript" value="244" />
           <entry key="Markdown" value="575" />
-          <entry key="PLAIN_TEXT" value="38" />
+          <entry key="PLAIN_TEXT" value="254" />
           <entry key="Scratch" value="1" />
           <entry key="TypeScript" value="2619" />
-          <entry key="TypeScript JSX" value="2515" />
+          <entry key="TypeScript JSX" value="2540" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -112,7 +76,7 @@
           <entry key="json" value="12" />
           <entry key="lock" value="1" />
           <entry key="md" value="1" />
-          <entry key="ts" value="20" />
+          <entry key="ts" value="21" />
           <entry key="tsx" value="22" />
         </counts>
       </usages-collector>
@@ -124,9 +88,33 @@
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="5" />
-          <entry key="TypeScript" value="20" />
+          <entry key="TypeScript" value="21" />
           <entry key="TypeScript JSX" value="22" />
           <entry key="yarn.lock" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-164969771">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TsLintLanguageService" value="1" />
+          <entry key="TypeScriptServerServiceImpl" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="iml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -134,23 +122,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/updateContentfulTypings.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="230">
-                <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+                <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
               </first_editor>
               <second_editor />
             </state>
@@ -158,19 +134,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/typings/npm-run.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/AppContainer.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="161">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -178,14 +145,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+            <state relative-caret-position="270">
+              <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/universal-react-app-2001.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/@types/express-serve-static-core/index.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9729">
+              <caret line="433" column="4" selection-start-line="433" selection-start-column="4" selection-end-line="433" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -203,7 +188,7 @@
         <entry file="file://$PROJECT_DIR$/src/index-html-template.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -211,7 +196,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/router.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
+            <state relative-caret-position="1564">
               <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
@@ -223,8 +208,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/clientEntry.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+            <state relative-caret-position="713">
+              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -236,7 +221,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/WithInitialProps.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -415,19 +400,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="tacocat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tacocat" type="462c0819:PsiDirectoryNode" />
+              <item name="universal-react-app-2001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="universal-react-app-2001" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -439,7 +424,7 @@
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nightclub" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="$PROJECT_DIR$/node_modules/tslint" />
@@ -603,8 +588,8 @@
       <item itemvalue="npm.dev" />
       <item itemvalue="npm.prod" />
       <item itemvalue="npm.build utilities" />
-      <item itemvalue="npm.updateTypings" />
       <item itemvalue="JavaScript Debug.prod JavaScript" />
+      <item itemvalue="npm.updateTypings" />
     </list>
     <recent_temporary>
       <list>
@@ -647,7 +632,8 @@
       <workItem from="1533165330293" duration="10822000" />
       <workItem from="1533343584662" duration="682000" />
       <workItem from="1533345548892" duration="7008000" />
-      <workItem from="1533393482710" duration="5775000" />
+      <workItem from="1533393482710" duration="6142000" />
+      <workItem from="1533399971656" duration="27000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1523405584419</created>
@@ -712,24 +698,31 @@
       <option name="project" value="LOCAL" />
       <updated>1533167534910</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Everything mostly working with prod deployment&#10;&#10;Stripped out lots of logging, a few errors to resolve. About to make a generic initialProps endpoint">
+      <created>1533399367713</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1533399367714</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237987000" />
+    <option name="totallyTimeSpent" value="238381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="-46" width="1920" height="1126" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19123931" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19337606" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36191425" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36191425" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.68125" weight="0.49252242" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -789,7 +782,8 @@
     <MESSAGE value="Stringify props" />
     <MESSAGE value="check for brand before rendering" />
     <MESSAGE value="Adding additional logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding additional logging" />
+    <MESSAGE value="Everything mostly working with prod deployment&#10;&#10;Stripped out lots of logging, a few errors to resolve. About to make a generic initialProps endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Everything mostly working with prod deployment&#10;&#10;Stripped out lots of logging, a few errors to resolve. About to make a generic initialProps endpoint" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -797,7 +791,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/utils/startProduction.js</url>
           <line>1</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -909,20 +902,6 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/8.10.0/core-modules/http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es6.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1157,7 +1136,7 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/updateContentfulTypings.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="230">
           <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
@@ -1169,53 +1148,26 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="230">
-            <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+            <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/WithInitialProps.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index-html-template.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/clientEntry.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/AppContainer.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="161">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/express-serve-static-core/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9729">
+          <caret line="433" column="4" selection-start-line="433" selection-start-column="4" selection-end-line="433" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1226,13 +1178,54 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index-html-template.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clientEntry.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/WithInitialProps.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/server.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+        <state relative-caret-position="270">
+          <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/universal-react-app-2001.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
         </state>
       </provider>
     </entry>
