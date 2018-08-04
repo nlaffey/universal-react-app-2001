@@ -1,7 +1,7 @@
 {
   "name": "universal-react-app-2001",
   "version": "1.0.0",
-  "description": "An experimental oddysey into the creation of my own universal react app",
+  "description": "An experimental odyssey into the creation of my own universal react app",
   "scripts": {
     "dev": "PORT=3000 node $NODE_DEBUG_OPTION ./utils/startDevelopment.js",
     "start": "NODE_ENV=production node $NODE_DEBUG_OPTION ./utils/startProduction.js ",
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint --project tslint.json --fix"
   },
-  "author": "Nickc Laffey",
+  "author": "Nick Laffey",
   "license": "ISC",
   "dependencies": {
     "@types/express": "^4.11.1",
