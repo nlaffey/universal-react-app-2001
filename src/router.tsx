@@ -2,7 +2,7 @@ import * as universalRouter from 'universal-router';
 import * as React from 'react';
 import AppContainer, { AppContainerInitialProps } from './components/AppContainer';
 import StyleContextProvider from './components/StyleContextProvider';
-import Menu, { MenuProps } from './components/Menu';
+import Home from './components/Home';
 
 export const cssSet = new Set();
 export const insertCss = (...styles) => {
@@ -27,18 +27,16 @@ interface AppContext {
 }
 
 const context: AppContext = {
-  insertCss,
+  insertCss
 };
 
 interface InitPropsDefaultValue {
   AppContainer: AppContainerInitialProps;
-  Menu: MenuProps;
 }
 
 export const InitPropsContext = React.createContext<InitPropsDefaultValue>(
   {
-    AppContainer: null,
-    Menu: null
+    AppContainer: null
   }
 );
 
@@ -46,7 +44,6 @@ export const routes = [
   {
     path: '/',
     action: (routerContext) => {
-      console.log(`routerContext.initialProps:${JSON.stringify(routerContext.initialProps)}`);
       return (
         <RouteContextWrapper initialProps={routerContext.initialProps}>
           <AppContainer>
@@ -54,20 +51,19 @@ export const routes = [
           </AppContainer>
         </RouteContextWrapper>
       );
-    },
+    }
   },
   {
-    path: '/menu',
+    path: '/home',
     action: routerContext => (
       <RouteContextWrapper initialProps={routerContext.initialProps}>
         <AppContainer>
-          <Menu/>
+          <Home/>
         </AppContainer>
       </RouteContextWrapper>
-    ),
-  },
+    )
+  }
 ];
-
 
 interface AppWrapperProps {
   initialProps: any;
@@ -75,7 +71,6 @@ interface AppWrapperProps {
 
 class RouteContextWrapper extends React.Component<AppWrapperProps> {
   render() {
-    console.log(`RouteContextWrapper initial props:${JSON.stringify(this.props.initialProps)}`);
     return (
       <InitPropsContext.Provider value={this.props.initialProps}>
         <StyleContextProvider context={context}>

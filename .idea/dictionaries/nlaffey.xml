@@ -2,6 +2,7 @@
   <dictionary name="nlaffey">
     <words>
       <w>devtool</w>
+      <w>maketypes</w>
       <w>memcached</w>
       <w>typings</w>
     </words>

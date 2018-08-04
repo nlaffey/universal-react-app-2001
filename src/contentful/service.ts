@@ -1,32 +1,25 @@
-import clientFactory from './clientFactory';
-import { Asset, Entry, EntryCollection } from 'contentful';
+import { Asset, Entry, createClient, ContentfulClientApi } from 'contentful';
 
-type GetEntriesOfType = <T>(typeId: string) => Promise<EntryCollection<T>>;
+let contentfulClient;
 
-const getEntriesOfType2: GetEntriesOfType = (typeId: string) => {
-  const client = clientFactory();
+function getClient(): ContentfulClientApi {
+  if (contentfulClient) return contentfulClient;
+  contentfulClient = createClient({
+    space: 'pjukj3n70qtm',
+    // TODO: Use env variable to pass in secure token. In the meantime feel free to hack my hello world app.
+    accessToken: 'b6364846253f7f4bf9a7bab27f482f066582a7db44783779bbc96e797666c7fe'
+  });
+  return contentfulClient;
+}
 
-  const query = {
-    content_type: typeId,
-    include: 10,
-  };
+export function getEntriesOfType<T>(content_type: string, include: number = 10) {
+  return getClient().getEntries({ content_type, include });
+}
 
-  return client.getEntries(query);
-};
+export function getEntry<T>(entryId: string): Promise<Entry<T>> {
+  return getClient().getEntry(entryId, { include: 10 });
+}
 
-type GetEntryOfType = <T>(entryId: string) => Promise<Entry<T>>;
-const getEntry2: GetEntryOfType = (entryId: string) => {
-  const client = clientFactory();
-  return client.getEntry(entryId, { include: 10 });
-};
-
-
-const getAssetById2: (assetId: string) => Promise<Asset> = (assetId) => {
-  const client = clientFactory();
-  return client.getAsset(assetId);
-};
-
-// noinspection JSUnusedGlobalSymbols
-export const getAssetById = getAssetById2;
-export const getEntry = getEntry2;
-export const getEntriesOfType = getEntriesOfType2;
+export function getAssetById(assetId: string): Promise<Asset> {
+  return getClient().getAsset(assetId);
+}

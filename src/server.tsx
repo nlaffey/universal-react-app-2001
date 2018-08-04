@@ -4,15 +4,13 @@ import * as path from 'path';
 import * as compression from 'compression';
 import { renderToString } from 'react-dom/server';
 import { Brand } from './typings/contentful/Brand';
-import { MenuCategory } from './typings/contentful/MenuCategory';
-import { getEntriesOfType, getEntry } from './contentful/service';
-import { typeIds } from './contentful/typeIds';
-import { renderRootTemplate } from './templates';
+import { getEntry } from './contentful/service';
 import { router, getRouteCss, insertCss } from './router';
 import { getInitialProps } from './getInitialProps';
 import { AppContainerInitialProps } from './components/AppContainer';
-import { APP_CONTAINER_PROPS_PATH, MENU_PROPS_PATH } from './constants/pathNames';
-import { MenuProps } from './components/Menu';
+import { APP_CONTAINER_PROPS_PATH } from './constants/pathNames';
+import { renderIndexHtmlTemplate } from './index-html-template';
+import { contentIds } from './contentful/typeIds';
 
 declare var global: {
   appRootPath: string,
@@ -37,12 +35,10 @@ export const setupApp = (port) => {
       try {
         const initialProps = await getInitialProps(component, port);
         const resolveObjectWithProps = { ...resolveObject, initialProps };
-        console.log(`resolveObjectWithProps: ${JSON.stringify(resolveObjectWithProps)}`);
         router.resolve(resolveObjectWithProps).then((componentWithProps) => {
           const componentHtml = renderToString(componentWithProps);
-          console.log(`componentHtml:${componentHtml}`);
           const css = getRouteCss();
-          const html = renderRootTemplate(componentHtml, fullBundleUrl, initialProps, css);
+          const html = renderIndexHtmlTemplate(componentHtml, fullBundleUrl, initialProps, css);
           res.send(html);
         });
       } catch (err) {
@@ -54,21 +50,11 @@ export const setupApp = (port) => {
   });
 
   app.get('/' + APP_CONTAINER_PROPS_PATH, async (req, res) => {
-    const brand = await getEntry<Brand>('3I483EqYbKMaQqwS6wWY0e');
+    const brand = await getEntry<Brand>(contentIds.brand);
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Cache-Control', 'public, max-age=31536000');
     const dataResponseObject: AppContainerInitialProps = {
       brand
-    };
-    res.send(JSON.stringify(dataResponseObject));
-  });
-
-  app.get('/' + MENU_PROPS_PATH, async (req, res) => {
-    const menuCategories = await getEntriesOfType<MenuCategory>(typeIds.MenuCategory);
-    res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Cache-Control', 'public, max-age=31536000');
-    const dataResponseObject: MenuProps = {
-      menuCategories,
     };
     res.send(JSON.stringify(dataResponseObject));
   });

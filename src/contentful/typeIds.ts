@@ -1,7 +1,9 @@
 export const typeIds = {
-  MenuItem: '2PqfXUJwE8qSYKuM0U6w8M',
-  MenuCategory: 'menuCategory',
-  Brand: 'sFzTZbSuM8coEwygeUYes',
-  MerchandiseItem: 'merchandiseItem',
-  MerchandiseCategory: 'merchandiseCategory',
+  // https://app.contentful.com/spaces/pjukj3n70qtm/entries/P2ftMcLxsI4iUcqCIiuU4
+  Brand: 'brand'
 };
+
+export const contentIds = {
+  // https://app.contentful.com/spaces/pjukj3n70qtm/entries/P2ftMcLxsI4iUcqCIiuU4
+  brand: 'P2ftMcLxsI4iUcqCIiuU4'
+}

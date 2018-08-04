@@ -8,8 +8,7 @@ class HomeComponent extends React.Component<HomeProps> {
   render() {
     return (
       <div>
-        <h1>HomeComponent</h1>
-        {JSON.stringify(this.context)}
+        <h1>HomeComponent, I dont have any initial props</h1>
       </div>
     );
   }

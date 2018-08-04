@@ -1,9 +1,12 @@
+/**
+ * Webpack configuration for things that are outside of the normal day to day development functions
+ */
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   context: path.resolve(__dirname),
-  entry: { updateTypings: "../utils/updateTypings.ts" },
+  entry: { updateTypings: "./utils/updateContentfulTypings.ts" },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js"

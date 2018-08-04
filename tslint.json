@@ -1,6 +1,10 @@
 {
   "extends": "tslint-config-airbnb",
   "rules": {
+    "max-line-length": [
+      true,
+      200
+    ],
     "trailing-comma": false,
     "variable-name": false
   }

@@ -12,29 +12,17 @@ export interface AppContainerInitialProps {
   brand: Entry<Brand>;
 }
 
-export interface AppContainerState {
-  assetsUrl: string;
-  brand: Entry<Brand>;
-}
-
-class AppContainer extends React.Component<AppContainerInitialProps, AppContainerState> {
-
-  public static initialPropsId: string = 'AppContainerInitialProps';
+class AppContainer extends React.Component<AppContainerInitialProps> {
 
   render() {
-    console.log(`AppContainerRenderProps:${JSON.stringify(this.props)}`);
     const { brand } = this.props;
     return (
-      <span id="mounting-point" className={styles.container}>
-        {brand.fields.companyName}
-      </span>);
+      <div className={styles.container}>{brand.fields.siteName}</div>);
   }
 }
 
-
 const getInitialProps = async port => getInitialPropsData(APP_CONTAINER_PROPS_PATH, port);
-
-const AppContainerWithInitialProps = withInitialProps(AppContainer, getInitialProps);
+const AppContainerWithInitialProps = withInitialProps(AppContainer, 'AppContainer', getInitialProps);
 const AppContainerWithStylesAndInitialProps = withStyles(styles)(AppContainerWithInitialProps);
 
 export default AppContainerWithStylesAndInitialProps;
