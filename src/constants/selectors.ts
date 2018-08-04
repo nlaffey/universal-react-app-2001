@@ -1,0 +1,1 @@
+export const REACT_MOUNTING_POINT_ID = 'mounting-point';
