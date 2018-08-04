@@ -3,6 +3,11 @@
 
 ### Known issues
 
+* React hydrate is throwing a warning about the serverside html not being what was expected:
+```
+bundle.js:6 Warning: Did not expect server HTML to contain the text node "
+        " in <div>.
+ ```
 * Unable to run dev script when using Intellij with yarn selected as the project manager
 its giving the error below. It works fine when starting via command line with yarn or if I use npm as
 the package manager in Intellij:

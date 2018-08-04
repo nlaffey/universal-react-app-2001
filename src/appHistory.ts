@@ -1,23 +1,24 @@
 import createBrowserHistory from 'history/createBrowserHistory';
 import createMemoryHistory from 'history/createMemoryHistory';
 
-let history;
+let historySingleton;
 if (typeof window !== 'undefined') {
   console.log('Creating browser history');
-  history = createBrowserHistory();
+  historySingleton = createBrowserHistory();
 } else {
   console.log('Creating memory history');
-  history = createMemoryHistory();
+  historySingleton = createMemoryHistory();
 }
 
-const historyMiddleware = {
+const appHistory = {
   push: (path) => {
     console.log(`Navigating to ${path}`);
-    history.push(path);
+    historySingleton.push(path);
   },
   listen: (method) => {
-    history.listen(method);
+    historySingleton.listen(method);
   }
 };
 
-export default historyMiddleware;
+export default appHistory;
+

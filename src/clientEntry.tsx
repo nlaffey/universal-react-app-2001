@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { router } from './router';
-import history from './history';
 import { getInitialProps } from './getInitialProps';
 import { insertCss } from './utils/css';
 import { REACT_MOUNTING_POINT_ID } from './constants/selectors';
+import appHistory from './appHistory';
 
 declare global {
   // noinspection TsLint
@@ -61,6 +61,6 @@ const initialRoute: Location = {
 
 renderRoute(initialRoute);
 
-history.listen(renderRoute);
+appHistory.listen(renderRoute);
 
 
