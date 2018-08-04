@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d88a9422-32e9-45cb-9aa3-d321963ce215" name="Default" comment="Everything mostly working with prod deployment&#10;&#10;Stripped out lots of logging, a few errors to resolve. About to make a generic initialProps endpoint">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tacocat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/universal-react-app-2001.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,7 +112,9 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
+          <entry key="js" value="1" />
           <entry key="json" value="1" />
+          <entry key="md" value="1" />
           <entry key="yarnclean" value="1" />
         </counts>
       </usages-collector>
@@ -117,7 +122,21 @@
         <counts>
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="1" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="json" value="306" />
+          <entry key="md" value="136" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSON" value="306" />
+          <entry key="Markdown" value="136" />
         </counts>
       </usages-collector>
     </session>
@@ -125,13 +144,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/AppContainer.tsx">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="115">
+                <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/postcss.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="92">
+              <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -149,7 +177,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tacocat.iml">
+        <entry file="file://$PROJECT_DIR$/universal-react-app-2001.iml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
               <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
@@ -157,11 +185,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="621">
+              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -319,7 +347,6 @@
         <option value="$PROJECT_DIR$/src/utils/environment.ts" />
         <option value="$PROJECT_DIR$/src/typings/npm-run.d.ts" />
         <option value="$PROJECT_DIR$/utils/updateContentfulTypings.ts" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/WithInitialProps.tsx" />
         <option value="$PROJECT_DIR$/src/index-html-template.ts" />
         <option value="$PROJECT_DIR$/src/router.tsx" />
@@ -327,6 +354,7 @@
         <option value="$PROJECT_DIR$/src/components/AppContainer.tsx" />
         <option value="$PROJECT_DIR$/src/server.tsx" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -407,7 +435,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="package&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/package.json&#10;Server&#9;FILE&#9;file:///home/nick/git/tacocat/src/server.tsx&#10;App&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.tsx&#10;template&#9;FILE&#9;file:///home/nick/git/tacocat/src/index-html-template.ts&#10;with&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/WithInitialProps.tsx&#10;univer&#9;null&#9;null&#10;AppContainer&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.tsx&#10;READ&#9;FILE&#9;file:///home/nick/git/tacocat/README.md&#10;np&#9;FILE&#9;file:///home/nick/git/tacocat/src/typings/npm-run.d.ts&#10;readme&#9;FILE&#9;file:///home/nick/git/tacocat/README.md&#10;start&#9;FILE&#9;file:///home/nick/git/tacocat/utils/startProduction.js&#10;startPr&#9;FILE&#9;file:///home/nick/git/tacocat/utils/startProduction.js&#10;pac&#9;FILE&#9;file:///home/nick/git/tacocat/package.json&#10;startDev&#9;FILE&#9;file:///home/nick/git/tacocat/utils/startDevelopment.js&#10;update&#9;FILE&#9;file:///home/nick/git/tacocat/utils/updateContentfulTypings.ts&#10;package.json&#9;FILE&#9;file:///home/nick/git/tacocat/package.json&#10;typings&#9;FILE&#9;file:///home/nick/git/tacocat/src/typings&#10;@types/&#9;null&#9;null&#10;tsli&#9;FILE&#9;file:///home/nick/git/tacocat/tslint.json&#10;webpack&#9;FILE&#9;file:///home/nick/git/tacocat/webpack.utils.js&#10;yarn&#9;FILE&#9;file:///home/nick/git/tacocat/yarn.lock&#10;webpack.utils&#9;FILE&#9;file:///home/nick/git/tacocat/webpack.utils.js&#10;ser&#9;FILE&#9;file:///home/nick/git/tacocat/src/server.tsx&#10;type&#9;FILE&#9;file:///home/nick/git/tacocat/src/contentful/typeIds.ts&#10;server&#9;FILE&#9;file:///home/nick/git/tacocat/src/server.tsx&#10;router&#9;FILE&#9;file:///home/nick/git/tacocat/src/router.tsx&#10;Router.&#9;FILE&#9;file:///home/nick/git/tacocat/src/router.tsx&#10;clientEn&#9;FILE&#9;file:///home/nick/git/tacocat/src/clientEntry.tsx&#10;Menu.tsx&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/Menu.tsx&#10;Menu&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/Menu.tsx&#10;updateTypings&#9;FILE&#9;file:///home/nick/git/tacocat/utils/updateTypings.ts&#10;AppCont&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.tsx&#10;AppCon&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.tsx&#10;Ap&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.css&#10;AppC&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.tsx&#10;client&#9;FILE&#9;file:///home/nick/git/tacocat/src/clientEntry.tsx&#10;webpack.common&#9;FILE&#9;file:///home/nick/git/tacocat/webpack.server.common.js&#10;web&#9;FILE&#9;file:///home/nick/git/tacocat/webpack.client.common.js&#10;postcss&#9;FILE&#9;file:///home/nick/git/tacocat/postcss.config.js&#10;clientEntry&#9;FILE&#9;file:///home/nick/git/tacocat/src/clientEntry.tsx&#10;server.tsx&#9;FILE&#9;file:///home/nick/git/tacocat/src/server.tsx&#10;ignore&#9;FILE&#9;file:///home/nick/git/tacocat/.gitignore&#10;tslint.&#9;FILE&#9;file:///home/nick/git/tacocat/tslint.json&#10;app&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.tsx&#10;startProduc&#9;FILE&#9;file:///home/nick/git/tacocat/utils/startProduction.js&#10;setupApp&#9;null&#9;null&#10;server.ts&#9;FILE&#9;file:///home/nick/git/tacocat/src/server.tsx&#10;env&#9;FILE&#9;file:///home/nick/git/tacocat/src/utils/environment.ts&#10;menu&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/Menu.tsx&#10;appCont&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="READM&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/README.md&#10;package&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/package.json&#10;Server&#9;FILE&#9;file:///home/nick/git/tacocat/src/server.tsx&#10;App&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.tsx&#10;template&#9;FILE&#9;file:///home/nick/git/tacocat/src/index-html-template.ts&#10;with&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/WithInitialProps.tsx&#10;univer&#9;null&#9;null&#10;AppContainer&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.tsx&#10;READ&#9;FILE&#9;file:///home/nick/git/tacocat/README.md&#10;np&#9;FILE&#9;file:///home/nick/git/tacocat/src/typings/npm-run.d.ts&#10;readme&#9;FILE&#9;file:///home/nick/git/tacocat/README.md&#10;start&#9;FILE&#9;file:///home/nick/git/tacocat/utils/startProduction.js&#10;startPr&#9;FILE&#9;file:///home/nick/git/tacocat/utils/startProduction.js&#10;pac&#9;FILE&#9;file:///home/nick/git/tacocat/package.json&#10;startDev&#9;FILE&#9;file:///home/nick/git/tacocat/utils/startDevelopment.js&#10;update&#9;FILE&#9;file:///home/nick/git/tacocat/utils/updateContentfulTypings.ts&#10;package.json&#9;FILE&#9;file:///home/nick/git/tacocat/package.json&#10;typings&#9;FILE&#9;file:///home/nick/git/tacocat/src/typings&#10;@types/&#9;null&#9;null&#10;tsli&#9;FILE&#9;file:///home/nick/git/tacocat/tslint.json&#10;webpack&#9;FILE&#9;file:///home/nick/git/tacocat/webpack.utils.js&#10;yarn&#9;FILE&#9;file:///home/nick/git/tacocat/yarn.lock&#10;webpack.utils&#9;FILE&#9;file:///home/nick/git/tacocat/webpack.utils.js&#10;ser&#9;FILE&#9;file:///home/nick/git/tacocat/src/server.tsx&#10;type&#9;FILE&#9;file:///home/nick/git/tacocat/src/contentful/typeIds.ts&#10;server&#9;FILE&#9;file:///home/nick/git/tacocat/src/server.tsx&#10;router&#9;FILE&#9;file:///home/nick/git/tacocat/src/router.tsx&#10;Router.&#9;FILE&#9;file:///home/nick/git/tacocat/src/router.tsx&#10;clientEn&#9;FILE&#9;file:///home/nick/git/tacocat/src/clientEntry.tsx&#10;Menu.tsx&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/Menu.tsx&#10;Menu&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/Menu.tsx&#10;updateTypings&#9;FILE&#9;file:///home/nick/git/tacocat/utils/updateTypings.ts&#10;AppCont&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.tsx&#10;AppCon&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.tsx&#10;Ap&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.css&#10;AppC&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.tsx&#10;client&#9;FILE&#9;file:///home/nick/git/tacocat/src/clientEntry.tsx&#10;webpack.common&#9;FILE&#9;file:///home/nick/git/tacocat/webpack.server.common.js&#10;web&#9;FILE&#9;file:///home/nick/git/tacocat/webpack.client.common.js&#10;postcss&#9;FILE&#9;file:///home/nick/git/tacocat/postcss.config.js&#10;clientEntry&#9;FILE&#9;file:///home/nick/git/tacocat/src/clientEntry.tsx&#10;server.tsx&#9;FILE&#9;file:///home/nick/git/tacocat/src/server.tsx&#10;ignore&#9;FILE&#9;file:///home/nick/git/tacocat/.gitignore&#10;tslint.&#9;FILE&#9;file:///home/nick/git/tacocat/tslint.json&#10;app&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/AppContainer.tsx&#10;startProduc&#9;FILE&#9;file:///home/nick/git/tacocat/utils/startProduction.js&#10;setupApp&#9;null&#9;null&#10;server.ts&#9;FILE&#9;file:///home/nick/git/tacocat/src/server.tsx&#10;env&#9;FILE&#9;file:///home/nick/git/tacocat/src/utils/environment.ts&#10;menu&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/Menu.tsx" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON&#10;HTML" />
@@ -624,7 +652,7 @@
       <workItem from="1533343584662" duration="682000" />
       <workItem from="1533345548892" duration="7008000" />
       <workItem from="1533393482710" duration="6142000" />
-      <workItem from="1533399971656" duration="124000" />
+      <workItem from="1533399971656" duration="516000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1523405584419</created>
@@ -700,7 +728,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238478000" />
+    <option name="totallyTimeSpent" value="238870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="-46" width="1920" height="1126" extended-state="6" />
@@ -958,13 +986,6 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/postcss.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.client.common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1121,16 +1142,6 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="230">
-            <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/AppContainer.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1204,7 +1215,7 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
         <state relative-caret-position="-213" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tacocat.iml">
+    <entry file="file://$PROJECT_DIR$/universal-react-app-2001.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
@@ -1213,8 +1224,25 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="621">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="115">
+            <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/postcss.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
         </state>
       </provider>
     </entry>

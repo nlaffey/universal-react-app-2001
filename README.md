@@ -1,8 +1,11 @@
+### Things to look into more
+* Be more critical of what should be included in dependencies/devDependencies
+
 ### Known issues
 
-* Unable to run dev script when using IntelliJ with yarn selected as the project manager
+* Unable to run dev script when using Intellij with yarn selected as the project manager
 its giving the error below. It works fine when starting via command line with yarn or if I use npm as
-the package manager in IntelliJ:
+the package manager in Intellij:
 
 ```
 /home/nick/.nvm/versions/node/v8.0.0/bin/node /home/nick/.nvm/versions/node/v8.0.0/lib/node_modules/yarn/bin/yarn.js run dev
