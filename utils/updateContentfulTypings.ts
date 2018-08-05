@@ -16,7 +16,7 @@ function createDataJsonFiles(path: string, data) {
   fs.writeFileSync(__dirname + path + '.json', JSON.stringify(data.items[0].fields));
 }
 
-// TODO: Limit query to just get 1. That's all we need.
+// TODO: Limit initialQuery to just get 1. That's all we need.
 // TODO: Make this more generic so other services can use it
 function updateTypingsByEntryId(interfaceName: string, id: string) {
   getEntriesOfType(id).then((data) => {

@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d88a9422-32e9-45cb-9aa3-d321963ce215" name="Default" comment="Adding books page, hooked up google api">
+    <list default="true" id="d88a9422-32e9-45cb-9aa3-d321963ce215" name="Default" comment="Any typing for now">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clientEntry.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/clientEntry.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BookQueryPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookQueryPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WithInitialProps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/withInitialProps.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/pathnames.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/pathnames.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getInitialProps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/getInitialProps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/googleApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/googleApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/startServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/startServer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/updateContentfulTypings.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/updateContentfulTypings.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -97,69 +110,71 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TsLintLanguageService" value="1" />
-          <entry key="TypeScriptServerServiceImpl" value="1" />
+          <entry key="TsLintLanguageService" value="3" />
+          <entry key="TypeScriptServerServiceImpl" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="js" value="3" />
-          <entry key="json" value="2" />
+          <entry key="js" value="6" />
+          <entry key="json" value="3" />
           <entry key="md" value="2" />
-          <entry key="ts" value="23" />
-          <entry key="tsx" value="16" />
+          <entry key="ts" value="27" />
+          <entry key="tsx" value="20" />
           <entry key="yarnclean" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="3" />
+          <entry key="JSON" value="3" />
+          <entry key="JavaScript" value="6" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="TypeScript" value="22" />
-          <entry key="TypeScript JSX" value="16" />
+          <entry key="TypeScript" value="26" />
+          <entry key="TypeScript JSX" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="112" />
-          <entry key="js" value="7" />
+          <entry key="js" value="231" />
           <entry key="json" value="310" />
           <entry key="md" value="281" />
-          <entry key="ts" value="989" />
-          <entry key="tsx" value="4540" />
-          <entry key="txt" value="159" />
+          <entry key="ts" value="1374" />
+          <entry key="tsx" value="7577" />
+          <entry key="txt" value="177" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="310" />
-          <entry key="JavaScript" value="7" />
+          <entry key="JavaScript" value="231" />
           <entry key="Markdown" value="281" />
-          <entry key="PLAIN_TEXT" value="271" />
+          <entry key="PLAIN_TEXT" value="289" />
           <entry key="Scratch" value="16" />
-          <entry key="TypeScript" value="973" />
-          <entry key="TypeScript JSX" value="4540" />
+          <entry key="TypeScript" value="1358" />
+          <entry key="TypeScript JSX" value="7577" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/AppContainer.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+            <state relative-caret-position="189">
+              <caret line="42" column="53" lean-forward="true" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -167,11 +182,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/BookQueryPage.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+            <state relative-caret-position="138">
+              <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -180,39 +195,72 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/server.js">
+        <entry file="file://$PROJECT_DIR$/src/components/withInitialProps.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1403">
-              <caret line="1638" column="8" selection-start-line="1638" selection-start-column="8" selection-end-line="1638" selection-end-column="8" />
+            <state relative-caret-position="138">
+              <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/typings/googleApi/book.d.ts">
+        <entry file="file://$PROJECT_DIR$/src/appHistory.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="17" selection-start-column="17" selection-end-column="17" />
+            <state relative-caret-position="345">
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/constants/pathnames.ts">
+        <entry file="file://$PROJECT_DIR$/node_modules/@types/node/index.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            <state relative-caret-position="295">
+              <caret line="5927" column="13" selection-start-line="5927" selection-start-column="13" selection-end-line="5927" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/googleApi.ts">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="69">
-              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+              <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/startDevelopment.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/startServer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/getInitialProps.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
               <folding>
-                <element signature="e#0#42#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -221,39 +269,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/router.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="49" lean-forward="true" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Navigation.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            <state relative-caret-position="161">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/environment.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/@types/isomorphic-fetch/index.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#0#52#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -270,13 +289,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getIntia</find>
-      <find>component.name</find>
-      <find>resolveObjectWithProps</find>
-      <find>AppCo</find>
-      <find>Component.name</find>
-      <find>getInit</find>
-      <find>fields</find>
       <find>initialPropsId</find>
       <find>console.log</find>
       <find>assetsUrl</find>
@@ -300,6 +312,13 @@
       <find>;</find>
       <find>2001</find>
       <find>'2001'</find>
+      <find>start</find>
+      <find>getResolve</find>
+      <find>setupApp</find>
+      <find>location</find>
+      <find>getInitials</find>
+      <find>port</find>
+      <find>apphistory</find>
     </findStrings>
     <replaceStrings>
       <replace>pathname</replace>
@@ -322,16 +341,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/StyleContextProvider.tsx" />
-        <option value="$PROJECT_DIR$/webpack.client.prod.js" />
-        <option value="$PROJECT_DIR$/node_modules/isomorphic-style-loader/lib/withStyles.js" />
         <option value="$PROJECT_DIR$/utils/runWebpack.js" />
-        <option value="$PROJECT_DIR$/utils/startDevelopment.js" />
         <option value="$PROJECT_DIR$/src/components/AppContainer.css" />
         <option value="$PROJECT_DIR$/src/components/index.js" />
         <option value="$PROJECT_DIR$/Procfile.txt" />
         <option value="$PROJECT_DIR$/src/utils/url.ts" />
-        <option value="$PROJECT_DIR$/utils/startServer.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -339,7 +353,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.html" />
         <option value="$PROJECT_DIR$/webpack.client.dev.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.json" />
-        <option value="$PROJECT_DIR$/src/getInitialProps.ts" />
         <option value="$PROJECT_DIR$/src/components/Menu.tsx" />
         <option value="$PROJECT_DIR$/src/templates.ts" />
         <option value="$PROJECT_DIR$/utils/updateTypings.ts" />
@@ -354,25 +367,31 @@
         <option value="$PROJECT_DIR$/src/components/Root.tsx" />
         <option value="$PROJECT_DIR$/src/components/Home.tsx" />
         <option value="$PROJECT_DIR$/src/components/RouteContextWrapper.tsx" />
-        <option value="$PROJECT_DIR$/src/server.tsx" />
-        <option value="$PROJECT_DIR$/src/components/WithInitialProps.tsx" />
         <option value="$PROJECT_DIR$/src/utils/css.ts" />
-        <option value="$PROJECT_DIR$/src/constants/pathnames.ts" />
         <option value="$PROJECT_DIR$/src/constants/selectors.ts" />
         <option value="$PROJECT_DIR$/src/index-html-template.ts" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/history.ts" />
-        <option value="$PROJECT_DIR$/src/clientEntry.tsx" />
         <option value="$PROJECT_DIR$/utils/updateContentfulTypings.ts" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.ts" />
         <option value="$PROJECT_DIR$/src/utils/environment.ts" />
-        <option value="$PROJECT_DIR$/src/components/AppContainer.tsx" />
-        <option value="$PROJECT_DIR$/src/services/googleApi.ts" />
         <option value="$PROJECT_DIR$/src/typings/googleApi/book.d.ts" />
         <option value="$PROJECT_DIR$/src/components/Page1.tsx" />
-        <option value="$PROJECT_DIR$/src/router.tsx" />
         <option value="$PROJECT_DIR$/src/components/Navigation.tsx" />
+        <option value="$PROJECT_DIR$/src/services/googleApi.ts" />
+        <option value="$PROJECT_DIR$/src/constants/pathnames.ts" />
+        <option value="$PROJECT_DIR$/src/server.tsx" />
+        <option value="$PROJECT_DIR$/src/getInitialProps.ts" />
+        <option value="$PROJECT_DIR$/utils/startDevelopment.js" />
+        <option value="$PROJECT_DIR$/utils/startServer.js" />
+        <option value="$PROJECT_DIR$/src/router.tsx" />
+        <option value="$PROJECT_DIR$/src/clientEntry.tsx" />
+        <option value="$PROJECT_DIR$/src/appHistory.ts" />
+        <option value="$PROJECT_DIR$/src/components/WithInitialProps.tsx" />
+        <option value="$PROJECT_DIR$/src/components/initialPropsHoc.tsx" />
+        <option value="$PROJECT_DIR$/src/components/withInitialProps.tsx" />
         <option value="$PROJECT_DIR$/src/components/BookQueryPage.tsx" />
+        <option value="$PROJECT_DIR$/src/components/AppContainer.tsx" />
       </list>
     </option>
   </component>
@@ -398,6 +417,9 @@
       <scroll-view-position x="0" y="0" />
     </layout>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/package.json" />
@@ -408,9 +430,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="967" />
-    <option name="y" value="-46" />
     <option name="width" value="960" />
-    <option name="height" value="1126" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -437,8 +458,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -473,20 +494,7 @@
               <item name="universal-react-app-2001" type="b2602c69:ProjectViewProjectNode" />
               <item name="universal-react-app-2001" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="universal-react-app-2001" type="b2602c69:ProjectViewProjectNode" />
-              <item name="universal-react-app-2001" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="typings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="universal-react-app-2001" type="b2602c69:ProjectViewProjectNode" />
-              <item name="universal-react-app-2001" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="typings" type="462c0819:PsiDirectoryNode" />
-              <item name="googleApi" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -495,7 +503,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="Na&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Navigation.tsx&#10;r&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/router.tsx&#10;Router&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/router.tsx&#10;Page1&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Page1.tsx&#10;book&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/typings/googleApi/book.d.ts&#10;PAGE1&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Page1.tsx&#10;pAGE1&#9;null&#9;null&#10;Page&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Page1.tsx&#10;googleApi&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/typings/googleApi&#10;page&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Page1.tsx&#10;goo&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/services/googleApi.ts&#10;update&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/utils/updateContentfulTypings.ts&#10;updateTy&#9;RUN_CONFIGURATION&#9;updateTypings&#10;App&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/AppContainer.tsx&#10;AppConta&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/AppContainer.tsx&#10;Navi&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Navigation.tsx&#10;client&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/clientEntry.tsx&#10;N&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Navigation.tsx&#10;readme&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/README.md&#10;template&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/index-html-template.ts&#10;router&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/router.tsx&#10;Client&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/clientEntry.tsx&#10;WithInit&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/WithInitialProps.tsx&#10;server.ts&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/server.tsx&#10;R&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/router.tsx&#10;Nav&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Navigation.tsx&#10;server&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/server.tsx&#10;package&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/package.json&#10;AppContainer&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/AppContainer.tsx&#10;entryId&#9;null&#9;null&#10;appConta&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/AppContainer.tsx&#10;getIni&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/getInitialProps.ts&#10;app&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/AppContainer.tsx&#10;package.&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/package.json&#10;server.tsx&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/server.tsx&#10;READM&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/README.md&#10;Server&#9;FILE&#9;file:///home/nick/git/tacocat/src/server.tsx&#10;with&#9;FILE&#9;file:///home/nick/git/tacocat/src/components/WithInitialProps.tsx&#10;univer&#9;null&#9;null&#10;READ&#9;FILE&#9;file:///home/nick/git/tacocat/README.md&#10;np&#9;FILE&#9;file:///home/nick/git/tacocat/src/typings/npm-run.d.ts&#10;start&#9;FILE&#9;file:///home/nick/git/tacocat/utils/startProduction.js&#10;startPr&#9;FILE&#9;file:///home/nick/git/tacocat/utils/startProduction.js&#10;pac&#9;FILE&#9;file:///home/nick/git/tacocat/package.json&#10;startDev&#9;FILE&#9;file:///home/nick/git/tacocat/utils/startDevelopment.js&#10;package.json&#9;FILE&#9;file:///home/nick/git/tacocat/package.json&#10;typings&#9;FILE&#9;file:///home/nick/git/tacocat/src/typings&#10;@types/&#9;null&#9;null&#10;tsli&#9;FILE&#9;file:///home/nick/git/tacocat/tslint.json&#10;webpack&#9;FILE&#9;file:///home/nick/git/tacocat/webpack.utils.js" />
+    <property name="SearchEverywhereHistoryKey" value="with&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/withInitialProps.tsx&#10;App&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/AppContainer.tsx&#10;Bo&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/BookQueryPage.tsx&#10;Book&#9;null&#9;null&#10;server&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/server.tsx&#10;server.tsx&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/server.tsx&#10;start&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/utils/startDevelopment.js&#10;pac&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/package.json&#10;ser&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/server.tsx&#10;client&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/clientEntry.tsx&#10;get&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/getInitialProps.ts&#10;router&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/router.tsx&#10;server.t&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/server.tsx&#10;clie&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/clientEntry.tsx&#10;Router&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/router.tsx&#10;Na&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Navigation.tsx&#10;r&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/router.tsx&#10;Page1&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Page1.tsx&#10;book&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/typings/googleApi/book.d.ts&#10;PAGE1&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Page1.tsx&#10;pAGE1&#9;null&#9;null&#10;Page&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Page1.tsx&#10;googleApi&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/typings/googleApi&#10;page&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Page1.tsx&#10;goo&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/services/googleApi.ts&#10;update&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/utils/updateContentfulTypings.ts&#10;updateTy&#9;RUN_CONFIGURATION&#9;updateTypings&#10;AppConta&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/AppContainer.tsx&#10;Navi&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Navigation.tsx&#10;N&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Navigation.tsx&#10;readme&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/README.md&#10;template&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/index-html-template.ts&#10;Client&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/clientEntry.tsx&#10;WithInit&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/WithInitialProps.tsx&#10;server.ts&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/server.tsx&#10;R&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/router.tsx&#10;Nav&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/Navigation.tsx&#10;package&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/package.json&#10;AppContainer&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/AppContainer.tsx&#10;entryId&#9;null&#9;null&#10;appConta&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/AppContainer.tsx&#10;getIni&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/getInitialProps.ts&#10;app&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/src/components/AppContainer.tsx&#10;package.&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/package.json&#10;READM&#9;FILE&#9;file:///home/nick/git/universal-react-app-2001/README.md&#10;Server&#9;FILE&#9;file:///home/nick/git/tacocat/src/server.tsx&#10;univer&#9;null&#9;null&#10;READ&#9;FILE&#9;file:///home/nick/git/tacocat/README.md&#10;np&#9;FILE&#9;file:///home/nick/git/tacocat/src/typings/npm-run.d.ts&#10;startPr&#9;FILE&#9;file:///home/nick/git/tacocat/utils/startProduction.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TypeScript&#10;JSON&#10;HTML" />
@@ -515,7 +523,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="typescript-compiler-editor-notification" value="false" />
   </component>
@@ -712,7 +720,9 @@
       <workItem from="1533343584662" duration="682000" />
       <workItem from="1533345548892" duration="7008000" />
       <workItem from="1533393482710" duration="6142000" />
-      <workItem from="1533399971656" duration="17993000" />
+      <workItem from="1533399971656" duration="18612000" />
+      <workItem from="1533476550686" duration="5883000" />
+      <workItem from="1533482731644" duration="2753000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1523405584419</created>
@@ -812,25 +822,32 @@
       <option name="project" value="LOCAL" />
       <updated>1533417846267</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Any typing for now">
+      <created>1533418095228</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1533418095228</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256347000" />
+    <option name="totallyTimeSpent" value="265602000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="-46" width="1920" height="1126" extended-state="6" />
+    <frame x="7" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.19337606" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19551282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32801595" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36191425" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.68125" weight="0.49252242" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32706374" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3615465" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.68125" visible="true" weight="0.5611285" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -848,15 +865,15 @@
       <window_info anchor="right" id="Maven Projects" order="5" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19337606" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19551282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32801595" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36191425" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.68125" weight="0.49252242" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32706374" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3615465" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.68125" weight="0.5611285" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -894,7 +911,8 @@
     <MESSAGE value="Adding error handling for non 404 errors" />
     <MESSAGE value="Refactoring context helper functions and navigation" />
     <MESSAGE value="Adding books page, hooked up google api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding books page, hooked up google api" />
+    <MESSAGE value="Any typing for now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Any typing for now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -903,6 +921,12 @@
           <url>file://$PROJECT_DIR$/utils/startProduction.js</url>
           <line>1</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/withInitialProps.tsx</url>
+          <line>6</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -913,10 +937,6 @@
       <configuration name="NodeJSConfigurationType">
         <watch expression="__dirname" language="TypeScript" />
         <watch expression="path.resolve(__dirname)" language="TypeScript" />
-      </configuration>
-      <configuration name="js.build_tools.npm">
-        <watch expression="err" language="TypeScript JSX" />
-        <watch expression="data" language="TypeScript JSX" />
       </configuration>
     </watches-manager>
   </component>
@@ -1017,7 +1037,6 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Menu.tsx" />
     <entry file="file://$PROJECT_DIR$/src/components/Footer.tsx">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1036,20 +1055,7 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/startServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yarn.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="2400" selection-start-line="2400" selection-end-line="2400" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/yarn.lock" />
     <entry file="file://$PROJECT_DIR$/src/contentful/clientFactory.ts" />
     <entry file="file://$PROJECT_DIR$/src/providers/RootAppProvider.tsx" />
     <entry file="file://$PROJECT_DIR$/src/typings/contentful/Brand.d.ts">
@@ -1083,13 +1089,6 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/startDevelopment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="45" lean-forward="true" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="https://schemastore.azurewebsites.net/schemas/json/package.json">
       <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
@@ -1114,11 +1113,7 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.yarnclean">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-213" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.yarnclean" />
     <entry file="file://$PROJECT_DIR$/universal-react-app-2001.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1154,13 +1149,6 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Root.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1172,29 +1160,6 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/WithInitialProps.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1229,40 +1194,10 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/clientEntry.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/getInitialProps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/updateContentfulTypings.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
           <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/appHistory.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1283,46 +1218,6 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/isomorphic-fetch/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/AppContainer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/environment.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1403">
-          <caret line="1638" column="8" selection-start-line="1638" selection-start-column="8" selection-end-line="1638" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/pathnames.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/typings/googleApi/book.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1330,27 +1225,126 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/environment.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/isomorphic-fetch/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/pathnames.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/googleApi.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13846">
+          <caret line="602" column="8" selection-start-line="602" selection-start-column="8" selection-end-line="602" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clientEntry.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/startDevelopment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/startServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/getInitialProps.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/router.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="49" lean-forward="true" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+        <state relative-caret-position="161">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation.tsx">
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/node/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        <state relative-caret-position="295">
+          <caret line="5927" column="13" selection-start-line="5927" selection-start-column="13" selection-end-line="5927" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/appHistory.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/withInitialProps.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -1359,8 +1353,18 @@ const serverConfig = require('../webpack.server.config');``</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BookQueryPage.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+        <state relative-caret-position="138">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AppContainer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="42" column="53" lean-forward="true" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

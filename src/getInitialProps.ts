@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ResolveObject } from './server';
 
 function recursiveMap(children, fn) {
   return React.Children.map<any>(children, (child: React.ReactElement<any>) => {
@@ -15,16 +16,25 @@ function recursiveMap(children, fn) {
   });
 }
 
-export const getInitialProps = async (component, port) => {
+// TODO: Move this somewhere else? I don't think the client needs to import this file
+export interface InitialPropsContext {
+  port: number;
+  resolveObject: ResolveObject;
+}
+
+/**
+ * TODO: Write tests for this method and refactor
+ * */
+export const getInitialProps = async (component, initialPropsContext: InitialPropsContext) => {
   const promises = [];
 
   recursiveMap(component, (child) => {
     if (child.type.getInitialProps) {
-      promises.push(child.type.getInitialProps(port));
+      promises.push(child.type.getInitialProps(initialPropsContext));
     }
 
     if (child.type.ComposedComponent && child.type.ComposedComponent.getInitialProps) {
-      promises.push(child.type.ComposedComponent.getInitialProps(port).then(async (results) => {
+      promises.push(child.type.ComposedComponent.getInitialProps(initialPropsContext).then(async (results) => {
         return {
           data: results,
           id: child.initialPropsId

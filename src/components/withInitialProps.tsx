@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { InitPropsContext } from './RouteContextWrapper';
+import { InitialPropsContext } from '../getInitialProps';
 
-export const withInitialProps = (ComposedComponent, initialPropsId, initialProps) => {
+function withInitialProps<I>(ComposedComponent, initialPropsId: string, initialProps: (initialPropsContext: InitialPropsContext) => Promise<I>) {
 
   ComposedComponent.initialPropsId = initialPropsId;
 
-  class WithInitialProps extends React.Component {
+  class InitialPropsHoc extends React.Component {
     static displayName: string;
     static ComposedComponent: any;
     static contextTypes: any;
@@ -38,7 +39,9 @@ export const withInitialProps = (ComposedComponent, initialPropsId, initialProps
   }
 
   const displayName = ComposedComponent.displayName || ComposedComponent.name || 'Component';
-  WithInitialProps.displayName = `WithInitialProps(${displayName})`;
-  WithInitialProps.ComposedComponent = ComposedComponent;
-  return WithInitialProps;
-};
+  InitialPropsHoc.displayName = `WithInitialProps(${displayName})`;
+  InitialPropsHoc.ComposedComponent = ComposedComponent;
+  return InitialPropsHoc;
+}
+
+export default withInitialProps;

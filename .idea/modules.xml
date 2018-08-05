@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$//tacocat.iml" filepath="$PROJECT_DIR$//tacocat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/universal-react-app-2001.iml" filepath="$PROJECT_DIR$/.idea/universal-react-app-2001.iml" />
     </modules>
   </component>
 </project>
