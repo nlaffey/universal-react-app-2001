@@ -82,7 +82,7 @@ class BookQueryPage extends React.Component<BookQueryPageProps, BookQueryPageSta
         <h2>Showing first 10 results of {totalItems}</h2>
         <form onSubmit={this.handleFormSubmit}>
           <input type="text" value={query} name="query" onChange={this.handleQueryChange}/>
-          <button type="submit">Search</button>
+          <button type="submit" disabled={!query}>Search</button>
         </form>
         {this.renderBooks()}
       </div>
