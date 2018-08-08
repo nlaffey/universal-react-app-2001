@@ -5,7 +5,7 @@ import { getInitialProps, InitialPropsContext } from './getInitialProps';
 import { insertCss } from './utils/css';
 import { REACT_MOUNTING_POINT_ID } from './constants/selectors';
 import appHistory from './appHistory';
-import { ResolveObject } from './server';
+import { ResolveObject } from './typings/server';
 
 declare global {
   // noinspection TsLint

@@ -7,8 +7,8 @@ function createServer() {
   try {
     let serverDistFilePath = '../dist/server.js';
     delete require.cache[require.resolve(serverDistFilePath)];
-    const { setupApp } = require(serverDistFilePath);
-    server = http.createServer(setupApp(port));
+    const { createApp } = require(serverDistFilePath);
+    server = http.createServer(createApp(port));
     server.listen(port, () => {
       console.log(`Listening on port: ${port}`);
     });
