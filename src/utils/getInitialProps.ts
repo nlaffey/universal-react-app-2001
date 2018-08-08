@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ResolveObject } from './typings/server';
+import { ResolveObject } from '../typings/server';
 
 function recursiveMap(children, fn) {
   return React.Children.map<any>(children, (child: React.ReactElement<any>) => {

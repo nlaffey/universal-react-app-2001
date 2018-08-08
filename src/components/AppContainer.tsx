@@ -5,7 +5,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import { CONTENTFUL_ENTRY_ID_PATH, ENTRY_ID_PARAM } from '../constants/pathnames';
 import { localApiFetch } from '../utils/environment';
 import { contentIds } from '../contentful/typeIds';
-import { InitialPropsContext } from '../getInitialProps';
+import { InitialPropsContext } from '../utils/getInitialProps';
 import withInitialProps from './withInitialProps';
 
 const styles = require('./AppContainer.css');

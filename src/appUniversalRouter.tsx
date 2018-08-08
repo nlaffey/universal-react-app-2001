@@ -38,4 +38,5 @@ export const routes = [
 // TODO: Fix type hack.
 // noinspection TsLint
 const UniversalRouter: any = universalRouter.default ? universalRouter.default : universalRouter;
-export const router = new UniversalRouter(routes);
+const appUniversalRouter = new UniversalRouter(routes);
+export default appUniversalRouter;

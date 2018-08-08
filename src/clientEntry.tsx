@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { router } from './router';
-import { getInitialProps, InitialPropsContext } from './getInitialProps';
+import appUniversalRouter from './appUniversalRouter';
+import { getInitialProps, InitialPropsContext } from './utils/getInitialProps';
 import { insertCss } from './utils/css';
 import { REACT_MOUNTING_POINT_ID } from './constants/selectors';
 import appHistory from './appHistory';
@@ -35,7 +35,7 @@ interface Location {
 
 const renderRoute = (location: Location) => {
   const resolveObject = getResolveObject(location);
-  router.resolve(resolveObject).then(async (component) => {
+  appUniversalRouter.resolve(resolveObject).then(async (component) => {
     // We don't need to get initialProps if this is the initialRender, we already retrieved these on the server.
     let initialProps;
     const initialPropsContext: InitialPropsContext = {
@@ -49,7 +49,7 @@ const renderRoute = (location: Location) => {
       initialProps = await getInitialProps(component, initialPropsContext);
     }
     const resolveObjectWithProps = { ...resolveObject, initialProps };
-    router.resolve(resolveObjectWithProps).then((componentWithProps) => {
+    appUniversalRouter.resolve(resolveObjectWithProps).then((componentWithProps) => {
       if (isInitialRender) {
         ReactDOM.hydrate(componentWithProps, mountingPoint);
       } else {

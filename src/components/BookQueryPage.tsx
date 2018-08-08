@@ -1,8 +1,9 @@
 import * as React from 'react';
 import * as queryString from 'query-string';
 import { getBookListingByQuery } from '../services/googleApi';
-import { InitialPropsContext } from '../getInitialProps';
+import { InitialPropsContext } from '../utils/getInitialProps';
 import withInitialProps from './withInitialProps';
+import AppContainer from './AppContainer';
 
 const DEFAULT_QUERY = '2001: A Space Odyssey';
 
@@ -20,7 +21,9 @@ interface BookQueryPageState {
 }
 
 /**
- * Book initialQuery page is an example of a page that uses an external API to get its initial props
+ * Book initialQuery page is an example of a page that uses an external API to get its initial props. This also helps
+ * to prove that we're recursively finding all child components inside of the AppContainer component that use the initial
+ * props HOC
  */
 class BookQueryPage extends React.Component<BookQueryPageProps, BookQueryPageState> {
 

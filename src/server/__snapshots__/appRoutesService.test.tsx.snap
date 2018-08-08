@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppRouteService createAppRouteHandlers should create route functions that match the snapshot 1`] = `
+Object {
+  "handleContentfulGetRequest": [Function],
+  "handleUniversalRouterComponentRendering": [Function],
+}
+`;
+
+exports[`AppRouteService handleContentfulGetRequest should call contentful api and send entry json 1`] = `
+Array [
+  Array [
+    "{\\"isGetEntryMock\\":true}",
+  ],
+]
+`;
+
+exports[`AppRouteService handleContentfulGetRequest should set header information for cached json 1`] = `
+Array [
+  Array [
+    "Content-Type",
+    "application/json",
+  ],
+  Array [
+    "Cache-Control",
+    "public, max-age=31536000",
+  ],
+]
+`;
+
+exports[`AppRouteService handleUniversalRouterComponentRendering should call getInitialProps method passing in the component and context info 1`] = `
+Array [
+  Array [
+    Object {
+      "mockComponent": true,
+    },
+    Object {
+      "port": 2000,
+      "resolveObject": Object {
+        "context": Object {
+          "insertCss": [Function],
+        },
+        "pathname": "/mockPath123",
+        "query": "foo=baz",
+      },
+    },
+  ],
+]
+`;
+
+exports[`AppRouteService handleUniversalRouterComponentRendering should call the universal router with the context, pathname and query 1`] = `
+Array [
+  Array [
+    Object {
+      "context": Object {
+        "insertCss": [Function],
+      },
+      "pathname": "/mockPath123",
+      "query": "foo=baz",
+    },
+  ],
+]
+`;
+
+exports[`AppRouteService handleUniversalRouterComponentRendering should send html with initial props populated 1`] = `
+Array [
+  Array [
+    "<!doctype html>
+    <html>
+      <head>
+        <title>Universal React App</title>
+        <style type=\\"text/css\\">
+        
+        </style>
+      </head>
+      <body>
+      <div id=\\"mounting-point\\">
+        undefined
+      </div>
+      <script type=\\"text/javascript\\">
+        window.initialProps = undefined
+        window.apiPath = undefined
+      </script>
+      <script src=\\"/public/bundle.js\\"></script>
+      </body>
+    </html>",
+  ],
+]
+`;
