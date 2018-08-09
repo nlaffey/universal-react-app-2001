@@ -59,6 +59,18 @@ Array [
       "query": "foo=baz",
     },
   ],
+  Array [
+    Object {
+      "context": Object {
+        "insertCss": [Function],
+      },
+      "initialProps": Object {
+        "mockInitialProps": true,
+      },
+      "pathname": "/mockPath123",
+      "query": "foo=baz",
+    },
+  ],
 ]
 `;
 
