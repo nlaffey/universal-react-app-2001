@@ -7,6 +7,7 @@ import { localApiFetch } from '../utils/environment';
 import { contentIds } from '../contentful/typeIds';
 import { InitialPropsContext } from '../utils/getInitialProps';
 import withInitialProps from './withInitialProps';
+import Navigation from './Navigation';
 
 const styles = require('./AppContainer.css');
 
@@ -24,6 +25,7 @@ class AppContainer extends React.Component<AppContainerInitialProps> {
     return (
       <div className={styles.container}>
         <h1>{brand.fields.siteName}</h1>
+        <Navigation/>
         {this.props.children}
       </div>);
   }

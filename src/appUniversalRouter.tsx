@@ -2,7 +2,6 @@ import * as universalRouter from 'universal-router';
 import * as React from 'react';
 import AppContainer from './components/AppContainer';
 import { BOOK_QUERY_PATH, ROOT_PATH } from './constants/pathnames';
-import Navigation from './components/Navigation';
 import Root from './components/Root';
 import BookQueryPage from './components/BookQueryPage';
 import RouteContextWrapper from './components/RouteContextWrapper';
@@ -15,7 +14,6 @@ export const routes = [
       return (
         <RouteContextWrapper initialProps={routerContext.initialProps}>
           <AppContainer>
-            <Navigation/>
             <Root/>
           </AppContainer>
         </RouteContextWrapper>
@@ -27,7 +25,6 @@ export const routes = [
     action: routerContext => (
       <RouteContextWrapper initialProps={routerContext.initialProps}>
         <AppContainer>
-          <Navigation/>
           <BookQueryPage/>
         </AppContainer>
       </RouteContextWrapper>
