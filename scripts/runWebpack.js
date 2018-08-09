@@ -1,11 +1,6 @@
 const webpack = require('webpack');
 const weblog = require('webpack-log');
-const path = require('path');
 const clientLog = weblog({ name: 'client' });
-
-// TODO: Maybe move this elsewhere? Not sure that it makes sense here
-global.APP_ROOT_PATH = path.resolve(__dirname, '../');
-
 const logging = (config, err, stats, callback) => {
 
   if (err) {

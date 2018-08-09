@@ -1,8 +1,8 @@
+global.APP_ROOT_PATH = require('path').resolve(__dirname, '../');
 const http = require('http');
 const port = process.env.PORT || 3000;
 
 let server;
-
 function createServer() {
   try {
     let serverDistFilePath = '../dist/server.js';
