@@ -4,7 +4,7 @@ import { Entry } from 'contentful';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import { CONTENTFUL_ENTRY_ID_PATH, ENTRY_ID_PARAM } from '../constants/pathnames';
 import { localApiFetch } from '../utils/environment';
-import { contentIds } from '../contentful/typeIds';
+import { contentIds } from '../services/contentful/typeIds';
 import { InitialPropsContext } from '../utils/getInitialProps';
 import withInitialProps from './withInitialProps';
 import Navigation from './Navigation';

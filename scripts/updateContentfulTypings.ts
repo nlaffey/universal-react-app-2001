@@ -1,5 +1,5 @@
-import { typeIds } from '../src/contentful/typeIds';
-import { getEntriesOfType } from '../src/contentful/service';
+import { typeIds } from '../src/services/contentful/typeIds';
+import { getEntriesOfType } from '../src/services/contentful/service';
 import { npmRun } from '../src/typings/npm-run';
 import * as fs from 'fs';
 
@@ -32,13 +32,13 @@ function updateTypingsByEntryId(interfaceName: string, id: string) {
         Error: ${error}
     `);
   });
-};
+}
 
 function updateAllContentfulTypings() {
   Object.keys(typeIds).forEach((key: string) => {
     const id: string = typeIds[key];
     updateTypingsByEntryId(key, id);
   });
-};
+}
 
 updateAllContentfulTypings();

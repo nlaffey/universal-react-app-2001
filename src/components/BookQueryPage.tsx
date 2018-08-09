@@ -1,9 +1,8 @@
 import * as React from 'react';
 import * as queryString from 'query-string';
-import { getBookListingByQuery } from '../services/googleApi';
+import { getBookListingByQuery } from '../services/google/googleApi';
 import { InitialPropsContext } from '../utils/getInitialProps';
 import withInitialProps from './withInitialProps';
-import AppContainer from './AppContainer';
 
 const DEFAULT_QUERY = '2001: A Space Odyssey';
 

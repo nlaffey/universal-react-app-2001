@@ -3,7 +3,7 @@ import { AppRouteHandlers, AppRouteService } from './appRouteService';
 describe('AppRouteService', () => {
   let appRouteHandlerService: AppRouteService;
   beforeAll(() => {
-    jest.mock('../contentful/service.ts');
+    jest.mock('../services/contentful/contentfulService.ts');
     jest.mock('../utils/getInitialProps.ts');
     jest.mock('react-dom/server');
     appRouteHandlerService = require('./appRouteService').default;

@@ -1,11 +1,10 @@
-import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import appUniversalRouter from './appUniversalRouter';
-import { getInitialProps, InitialPropsContext } from './utils/getInitialProps';
-import { insertCss } from './utils/css';
-import { REACT_MOUNTING_POINT_ID } from './constants/selectors';
-import appHistory from './appHistory';
-import { ResolveObject } from './typings/server';
+import appUniversalRouter from '../universal-router/appUniversalRouter';
+import { getInitialProps, InitialPropsContext } from '../utils/getInitialProps';
+import { insertCss } from '../utils/css';
+import { REACT_MOUNTING_POINT_ID } from '../constants/selectors';
+import appHistory from '../appHistory';
+import { ResolveObject } from '../typings/server';
 
 declare global {
   // noinspection TsLint
@@ -16,14 +15,11 @@ declare global {
 
 const mountingPoint = document.getElementById(REACT_MOUNTING_POINT_ID);
 
-const getResolveObject = (location: Location): ResolveObject => {
-  const resolveObject: ResolveObject = {
-    pathname: location.pathname,
-    query: location.search,
-    context: { insertCss }
-  };
-  return resolveObject;
-};
+const getResolveObject = (location: Location): ResolveObject => ({
+  pathname: location.pathname,
+  query: location.search,
+  context: { insertCss }
+});
 
 interface Location {
   hash: string;

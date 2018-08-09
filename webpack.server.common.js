@@ -3,11 +3,11 @@ const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   context: path.resolve(__dirname),
-  entry: "./src/server.tsx",
+  entry: "./src/server/createApp.tsx",
   output: {
-    library: 'appServer',
+    library: 'createApp',
     path: path.resolve(__dirname, "dist"),
-    filename: "server.js",
+    filename: "createApp.js",
     libraryTarget: 'umd'
   },
   module: {
