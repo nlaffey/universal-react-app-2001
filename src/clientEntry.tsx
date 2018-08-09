@@ -33,31 +33,26 @@ interface Location {
   state: { isInitialRender: boolean };
 }
 
-const renderRoute = (location: Location) => {
+async function renderRoute(location: Location) {
   const resolveObject = getResolveObject(location);
-  appUniversalRouter.resolve(resolveObject).then(async (component) => {
-    // We don't need to get initialProps if this is the initialRender, we already retrieved these on the server.
-    let initialProps;
-    const initialPropsContext: InitialPropsContext = {
-      resolveObject,
-      port: null
-    };
-    const isInitialRender = location.state && location.state.isInitialRender;
-    if (isInitialRender) {
-      initialProps = window.initialProps;
-    } else {
-      initialProps = await getInitialProps(component, initialPropsContext);
-    }
-    const resolveObjectWithProps = { ...resolveObject, initialProps };
-    appUniversalRouter.resolve(resolveObjectWithProps).then((componentWithProps) => {
-      if (isInitialRender) {
-        ReactDOM.hydrate(componentWithProps, mountingPoint);
-      } else {
-        ReactDOM.hydrate(componentWithProps, mountingPoint);
-      }
-    });
-  });
-};
+  const component = await appUniversalRouter.resolve(resolveObject);
+  // We don't need to get initialProps if this is the initialRender, we already retrieved these on the server.
+  let initialProps;
+  const initialPropsContext: InitialPropsContext = { resolveObject, port: null };
+  const isInitialRender = location.state && location.state.isInitialRender;
+  if (isInitialRender) {
+    initialProps = window.initialProps;
+  } else {
+    initialProps = await getInitialProps(component, initialPropsContext);
+  }
+  const resolveObjectWithProps = { ...resolveObject, initialProps };
+  const componentWithProps = await appUniversalRouter.resolve(resolveObjectWithProps);
+  if (isInitialRender) {
+    ReactDOM.hydrate(componentWithProps, mountingPoint);
+  } else {
+    ReactDOM.render(componentWithProps, mountingPoint);
+  }
+}
 
 const initialRoute: Location = {
   hash: null,

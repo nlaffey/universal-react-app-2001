@@ -11,7 +11,7 @@ describe('AppRouteService', () => {
 
   describe('createAppRouteHandlers', () => {
     test('should create route functions that match the snapshot', () => {
-      const appRouteHandlers = appRouteHandlerService.createAppRouteHandlers(200, jest.fn());
+      const appRouteHandlers = appRouteHandlerService.createAppRouteHandlers({ port: 200, universalRouter: jest.fn() });
       expect(appRouteHandlers).toMatchSnapshot();
     });
   });
@@ -19,7 +19,7 @@ describe('AppRouteService', () => {
   describe('handleContentfulGetRequest', () => {
     let appRouteHandlers: AppRouteHandlers;
     beforeEach(() => {
-      appRouteHandlers = appRouteHandlerService.createAppRouteHandlers(2000, jest.fn());
+      appRouteHandlers = appRouteHandlerService.createAppRouteHandlers({ port: 200, universalRouter: jest.fn() });
     });
 
     test('should call contentful api and send entry json', async () => {
@@ -44,7 +44,10 @@ describe('AppRouteService', () => {
     let mockUniversalRouter;
     beforeEach(() => {
       mockUniversalRouter = { resolve: jest.fn(() => Promise.resolve({ mockComponent: true })) };
-      appRouteHandlers = appRouteHandlerService.createAppRouteHandlers(2000, mockUniversalRouter);
+      appRouteHandlers = appRouteHandlerService.createAppRouteHandlers({
+        port: 2000,
+        universalRouter: mockUniversalRouter
+      });
     });
 
     test('should call the universal router with the context, pathname and query', async () => {

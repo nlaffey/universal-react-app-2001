@@ -1,15 +1,10 @@
 import * as path from 'path';
 
-declare var global: {
-  APP_ROOT_PATH: string,
-};
-
 export const ASSET_DOMAIN = '/';
 export const BUNDLE_PATH = '/public/bundle.js';
 export const FULL_BUNDLE_URL = path.join(ASSET_DOMAIN, BUNDLE_PATH);
 
 export const PUBLIC_PATH = '/public';
-export const FULL_PUBLIC_PATH = path.resolve(global.APP_ROOT_PATH, PUBLIC_PATH);
 
 export const ROOT_PATH = '/';
 

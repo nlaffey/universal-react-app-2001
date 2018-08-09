@@ -8,15 +8,17 @@ import { FULL_BUNDLE_URL } from '../constants/pathnames';
 import { ResolveObject } from '../typings/server';
 import { NextFunction, Response, Request } from 'express';
 
+type RouteHandlerContext = { port: number, universalRouter: any };
+
 export type AppRouteHandlers = {
   handleUniversalRouterComponentRendering: (req: Request, res: Response, next: NextFunction) => Promise<void>
   handleContentfulGetRequest: (req: Request, res: Response, next: NextFunction) => Promise<void>
 };
 
-export type CreateAppRouteHandlers = (port: number, universalRouter) => AppRouteHandlers;
-
+export type CreateAppRouteHandlers = (routeHandlerContext: RouteHandlerContext) => AppRouteHandlers;
 const createAppRouteHandlers: CreateAppRouteHandlers =
-  function createAppRouteHandlers(port: number, universalRouter): AppRouteHandlers {
+  function createAppRouteHandlers(routeHandlerContext: RouteHandlerContext): AppRouteHandlers {
+    const { port, universalRouter } = routeHandlerContext;
 
     async function handleUniversalRouterComponentRendering(req: Request, res: Response, next: NextFunction) {
       const parsedUrl = url.parse(req.url);
