@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as queryString from 'query-string';
 import { getBookListingByQuery } from '../services/google/googleApi';
-import { InitialPropsContext } from '../utils/getInitialProps';
+import { InitialPropsContext } from '../utils/getInitialPropsRecursively';
 import withInitialProps from './withInitialProps';
 
 const DEFAULT_QUERY = '2001: A Space Odyssey';
@@ -93,8 +93,8 @@ class BookQueryPage extends React.Component<BookQueryPageProps, BookQueryPageSta
 }
 
 async function getInitialProps(initialPropsContext: InitialPropsContext): Promise<BookQueryPageInitialProps> {
-  const { resolveObject } = initialPropsContext;
-  const { query } = resolveObject;
+  const { resolveContext } = initialPropsContext;
+  const { query } = resolveContext;
   // TODO: Think about naming here, it's not that awesome that im getting the query from the query (location.search)
   const initialQuery = queryString.parse(query).query || DEFAULT_QUERY;
   const initialBookQueryResponse = await getBookListingByQuery(initialQuery);

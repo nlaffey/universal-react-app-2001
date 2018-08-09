@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { InitPropsContext } from './RouteContextWrapper';
-import { InitialPropsContext } from '../utils/getInitialProps';
+import { InitialPropsContext } from '../utils/getInitialPropsRecursively';
 
 function withInitialProps<I>(ComposedComponent, initialPropsId: string, initialProps: (initialPropsContext: InitialPropsContext) => Promise<I>) {
 

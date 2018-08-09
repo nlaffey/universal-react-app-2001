@@ -1,8 +1,8 @@
 import * as ReactDOM from 'react-dom';
-import { ResolveObject } from '../typings/server';
+import { ResolveContext } from '../typings/server';
 import { insertCss } from '../utils/css';
 import appUniversalRouter from '../universal-router/appUniversalRouter';
-import { getInitialProps, InitialPropsContext } from '../utils/getInitialProps';
+import getInitialPropsRecursively, { InitialPropsContext } from '../utils/getInitialPropsRecursively';
 
 declare global {
   // noinspection TsLint
@@ -17,15 +17,15 @@ export interface AppLocation {
 }
 
 export async function renderRoute(location: AppLocation, mountingElement: HTMLElement, hydrate?: boolean) {
-  const resolveObject: ResolveObject = {
+  const resolveObject: ResolveContext = {
     pathname: location.pathname,
     query: location.search,
     context: { insertCss }
   };
   try {
     const component = await appUniversalRouter.resolve(resolveObject);
-    const initialPropsContext: InitialPropsContext = { resolveObject, port: null };
-    const initialProps = await getInitialProps(component, initialPropsContext);
+    const initialPropsContext: InitialPropsContext = { resolveContext: resolveObject, port: null };
+    const initialProps = await getInitialPropsRecursively(component, initialPropsContext);
     const resolveObjectWithProps = { ...resolveObject, initialProps };
     const componentWithProps = await appUniversalRouter.resolve(resolveObjectWithProps);
     if (hydrate) {

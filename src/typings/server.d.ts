@@ -1,4 +1,4 @@
-export type ResolveObject = {
+export type ResolveContext = {
   pathname: string;
   query: string;
   // TODO: Rename this to stylesContext? Is this being used for anything else?
