@@ -33,7 +33,7 @@ const createAppRouteHandlers: CreateAppRouteHandlers =
         const componentWithProps = await universalRouter.resolve(resolveObjectWithProps);
         const componentHtml = renderToString(componentWithProps);
         const css = getRouteCss();
-        const html = renderIndexHtmlTemplate(componentHtml, FULL_BUNDLE_URL, initialProps, css);
+        const html = renderIndexHtmlTemplate(componentHtml, FULL_BUNDLE_URL, css);
         res.send(html);
       } catch (err) {
         if (err.status !== 404) {
