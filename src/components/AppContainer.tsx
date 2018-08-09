@@ -18,7 +18,7 @@ export interface AppContainerInitialProps {
 /**
  * AppContainer is an example of a wrapping container component that fetches data from an API proxied through our server
  */
-class AppContainer extends React.Component<AppContainerInitialProps> {
+class AppContainer extends React.PureComponent<AppContainerInitialProps> {
 
   render() {
     const { brand } = this.props;

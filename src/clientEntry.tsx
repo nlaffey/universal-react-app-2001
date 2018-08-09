@@ -34,23 +34,27 @@ interface Location {
 }
 
 async function renderRoute(location: Location) {
-  const resolveObject = getResolveObject(location);
-  const component = await appUniversalRouter.resolve(resolveObject);
-  // We don't need to get initialProps if this is the initialRender, we already retrieved these on the server.
-  let initialProps;
-  const initialPropsContext: InitialPropsContext = { resolveObject, port: null };
-  const isInitialRender = location.state && location.state.isInitialRender;
-  if (isInitialRender) {
-    initialProps = window.initialProps;
-  } else {
-    initialProps = await getInitialProps(component, initialPropsContext);
-  }
-  const resolveObjectWithProps = { ...resolveObject, initialProps };
-  const componentWithProps = await appUniversalRouter.resolve(resolveObjectWithProps);
-  if (isInitialRender) {
-    ReactDOM.hydrate(componentWithProps, mountingPoint);
-  } else {
-    ReactDOM.render(componentWithProps, mountingPoint);
+  try {
+    const resolveObject = getResolveObject(location);
+    const component = await appUniversalRouter.resolve(resolveObject);
+    // We don't need to get initialProps if this is the initialRender, we already retrieved these on the server.
+    const initialPropsContext: InitialPropsContext = { resolveObject, port: null };
+    let initialProps;
+    const isInitialRender = location.state && location.state.isInitialRender;
+    if (isInitialRender) {
+      initialProps = window.initialProps;
+    } else {
+      initialProps = await getInitialProps(component, initialPropsContext);
+    }
+    const resolveObjectWithProps = { ...resolveObject, initialProps };
+    const componentWithProps = await appUniversalRouter.resolve(resolveObjectWithProps);
+    if (isInitialRender) {
+      ReactDOM.hydrate(componentWithProps, mountingPoint);
+    } else {
+      ReactDOM.render(componentWithProps, mountingPoint);
+    }
+  } catch (error) {
+    console.error(error);
   }
 }
 
@@ -62,6 +66,7 @@ const initialRoute: Location = {
   state: { isInitialRender: true }
 };
 
+// noinspection JSIgnoredPromiseFromCall
 renderRoute(initialRoute);
 
 appHistory.listen(renderRoute);

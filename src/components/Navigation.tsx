@@ -5,7 +5,7 @@ import appHistory from '../appHistory';
 interface NavigationProps {
 }
 
-class Navigation extends React.Component<NavigationProps> {
+class Navigation extends React.PureComponent<NavigationProps> {
   constructor(props) {
     super(props);
     Navigation.handleNavigationClick = Navigation.handleNavigationClick.bind(this);
