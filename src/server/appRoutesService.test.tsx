@@ -4,7 +4,7 @@ describe('AppRouteService', () => {
   let appRouteHandlerService: AppRouteService;
   beforeAll(() => {
     jest.mock('../services/contentful/contentfulService.ts');
-    jest.mock('../utils/getInitialProps.ts');
+    jest.mock('../utils/getInitialPropsRecursively.ts');
     jest.mock('react-dom/server');
     appRouteHandlerService = require('./appRouteService').default;
   });
@@ -62,10 +62,9 @@ describe('AppRouteService', () => {
       const req: any = { url: '/mockPath123?foo=baz' };
       const res: any = { send: jest.fn(), setHeader: jest.fn() };
       const next: any = {};
-      const { getInitialProps } = require('../utils/getInitialProps');
-      getInitialProps.mockReset();
+      const getInitialPropsRecursively = require('../utils/getInitialPropsRecursively').default;
       await appRouteHandlers.handleUniversalRouterComponentRendering(req, res, next);
-      expect(getInitialProps.mock.calls).toMatchSnapshot();
+      expect(getInitialPropsRecursively.mock.calls).toMatchSnapshot();
     });
 
     test('should send html with initial props populated', async (done) => {

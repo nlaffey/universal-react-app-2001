@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderRoute should call getInitialPropsRecursively 1`] = `
+Array [
+  Array [
+    Object {
+      "mockComponent": true,
+    },
+    Object {
+      "port": null,
+      "resolveContext": Object {
+        "context": Object {
+          "insertCss": [Function],
+        },
+        "pathname": "mock/path/name",
+        "query": "?mockSearch",
+      },
+    },
+  ],
+]
+`;
+
+exports[`renderRoute should call hydrate when is initial render 1`] = `
+Array [
+  Array [
+    Object {
+      "mockComponent": true,
+    },
+    Object {
+      "mockElement": true,
+    },
+  ],
+  Array [
+    Object {
+      "mockComponent": true,
+    },
+    Object {
+      "mockElement": true,
+    },
+  ],
+  Array [
+    Object {
+      "mockComponent": true,
+    },
+    Object {
+      "mockElement": true,
+    },
+  ],
+]
+`;
+
+exports[`renderRoute should call render when not initial render 1`] = `
+Array [
+  Array [
+    Object {
+      "mockComponent": true,
+    },
+    Object {
+      "mockElement": true,
+    },
+  ],
+]
+`;
+
+exports[`renderRoute should call resolve twice, once without props, once with props 1`] = `
+Array [
+  Array [
+    Object {
+      "context": Object {
+        "insertCss": [Function],
+      },
+      "pathname": "mock/path/name",
+      "query": "?mockSearch",
+    },
+  ],
+  Array [
+    Object {
+      "context": Object {
+        "insertCss": [Function],
+      },
+      "initialProps": Object {
+        "mockInitialProps": true,
+      },
+      "pathname": "mock/path/name",
+      "query": "?mockSearch",
+    },
+  ],
+  Array [
+    Object {
+      "context": Object {
+        "insertCss": [Function],
+      },
+      "pathname": "mock/path/name",
+      "query": "?mockSearch",
+    },
+  ],
+  Array [
+    Object {
+      "context": Object {
+        "insertCss": [Function],
+      },
+      "initialProps": Object {
+        "mockInitialProps": true,
+      },
+      "pathname": "mock/path/name",
+      "query": "?mockSearch",
+    },
+  ],
+]
+`;

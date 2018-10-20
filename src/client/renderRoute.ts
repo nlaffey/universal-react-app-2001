@@ -16,24 +16,24 @@ export interface AppLocation {
   search: string;
 }
 
-export async function renderRoute(location: AppLocation, mountingElement: HTMLElement, hydrate?: boolean) {
-  const resolveObject: ResolveContext = {
-    pathname: location.pathname,
-    query: location.search,
-    context: { insertCss }
+export type RenderRoute = (location: AppLocation, mountingElement: HTMLElement, hydrate?: boolean) => Promise<{}>;
+export const renderRoute: RenderRoute =
+  async function renderRoute(location: AppLocation, mountingElement: HTMLElement, hydrate?: boolean) {
+    return new Promise(async (resolve) => {
+      const resolveObject: ResolveContext = {
+        pathname: location.pathname,
+        query: location.search,
+        context: { insertCss }
+      };
+      const component = await appUniversalRouter.resolve(resolveObject);
+      const initialPropsContext: InitialPropsContext = { resolveContext: resolveObject, port: null };
+      const initialProps = await getInitialPropsRecursively(component, initialPropsContext);
+      const resolveObjectWithProps = { ...resolveObject, initialProps };
+      const componentWithProps = await appUniversalRouter.resolve(resolveObjectWithProps);
+      if (hydrate) {
+        resolve(ReactDOM.hydrate(componentWithProps, mountingElement));
+      } else {
+        resolve(ReactDOM.render(componentWithProps, mountingElement));
+      }
+    });
   };
-  try {
-    const component = await appUniversalRouter.resolve(resolveObject);
-    const initialPropsContext: InitialPropsContext = { resolveContext: resolveObject, port: null };
-    const initialProps = await getInitialPropsRecursively(component, initialPropsContext);
-    const resolveObjectWithProps = { ...resolveObject, initialProps };
-    const componentWithProps = await appUniversalRouter.resolve(resolveObjectWithProps);
-    if (hydrate) {
-      ReactDOM.hydrate(componentWithProps, mountingElement);
-    } else {
-      ReactDOM.render(componentWithProps, mountingElement);
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}

@@ -36,7 +36,22 @@ Array [
     },
     Object {
       "port": 2000,
-      "resolveObject": Object {
+      "resolveContext": Object {
+        "context": Object {
+          "insertCss": [Function],
+        },
+        "pathname": "/mockPath123",
+        "query": "foo=baz",
+      },
+    },
+  ],
+  Array [
+    Object {
+      "mockComponent": true,
+    },
+    Object {
+      "port": 2000,
+      "resolveContext": Object {
         "context": Object {
           "insertCss": [Function],
         },
@@ -89,10 +104,6 @@ Array [
       <div id=\\"mounting-point\\">
         undefined
       </div>
-      <script type=\\"text/javascript\\">
-        window.initialProps = undefined
-        window.apiPath = undefined
-      </script>
       <script src=\\"/public/bundle.js\\"></script>
       </body>
     </html>",
